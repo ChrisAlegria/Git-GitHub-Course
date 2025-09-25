@@ -25,17 +25,13 @@ Podemos imaginar dos posibles escenarios: uno donde utilizamos un sistema de ges
 
   Más adelante, decidimos integrar **botones, inputs y más elementos de formulario** al HTML, y al guardar tendríamos la **versión 0.2**. El problema es que estos cambios sustituyen por completo la versión anterior.  
 
-  Ahora bien, si después de un tiempo, ya sea por una petición del cliente, por motivos del equipo de trabajo o por decisión personal, se nos solicita **volver al estado inicial** (con solo el header, la barra lateral y el footer), tendríamos que **borrar manualmente** todo lo que añadimos, lo cual es un proceso **tardado, propenso a errores y nada eficiente**.  
+  Ahora bien, si después de un tiempo, ya sea por una petición del cliente, por motivos del equipo de trabajo o por decisión personal o por algun error se nos solicita **volver al estado inicial** (con solo el header, la barra lateral y el footer), tendríamos que **borrar manualmente** todo lo que añadimos, lo cual es un proceso **tardado, propenso a errores y nada eficiente**.  
 
 - **Con un sistema de gestión de versiones:**  
-  Ahora, imaginemos el mismo caso, pero esta vez utilizando **Git**. Cada vez que realizamos un cambio importante en el archivo `index.html`, podemos **guardar una versión (commit)** que registra el estado exacto del proyecto en ese momento.  
+  Ahora bien, si aplicamos el mismo ejemplo pero utilizando un **sistema de gestión de versiones**, tendríamos que al crear un archivo `index.html`, en un primer momento le añadimos una estructura base con un **header**, una **barra lateral** y un **footer**. Al guardar estos cambios, podríamos crear una especie de **versión 0.1** mediante un **commit**, el cual consiste en **confirmar una versión en Git** que quedará registrada como un **punto de guardado en nuestro historial**.  
 
-  Supongamos que partimos de la **versión 0.1** (con header, barra lateral y footer). Luego añadimos botones, inputs y otros elementos, y guardamos esos cambios como la **versión 0.2**. La diferencia aquí es que **la versión 0.1 no se pierde**, ya que Git mantiene un historial completo de todo lo que hemos hecho.  
+  Más adelante, si decidimos integrar **botones, inputs y más elementos de formulario** al HTML, al guardar podríamos tener la **versión 0.2**. A diferencia de cuando no contamos con un sistema de gestión de versiones, aquí **no se sustituye la versión 0.1**, sino que **todas las versiones anteriores permanecen almacenadas** en el historial del repositorio.  
 
-  Lo importante es entender que cada vez que confirmamos un cambio, Git crea una especie de **“copia” del proyecto** (también llamada *snapshot*), que guarda todo el estado del código en ese momento. Así, aunque sigamos trabajando y modificando archivos, siempre podremos regresar a cualquiera de esas copias anteriores sin perder nada.  
+  De esta manera, si después de un tiempo, ya sea por una petición del cliente, motivos del equipo, decisión personal o incluso por un error, se nos solicita **volver al estado inicial** (con solo el header, la barra lateral y el footer), mediante Git tendríamos la posibilidad de regresar fácilmente a esa versión anterior. A este proceso se le conoce como **rollback**.  
 
-  Si en algún momento alguien del equipo o el cliente solicita regresar al diseño inicial, simplemente podemos **volver a la versión 0.1 con un solo comando**, sin necesidad de eliminar manualmente los cambios realizados.  
-
-  Otra gran ventaja es que con Git también podemos **comparar versiones de código** (por ejemplo, ver las diferencias entre la versión 0.1 y la 0.2). De esta manera, podemos identificar con precisión qué líneas se añadieron, modificaron o eliminaron en cada cambio.  
-
-  Además, Git nos permite trabajar de manera **colaborativa**: varios desarrolladores pueden aportar cambios en distintas partes del proyecto, y gracias al sistema de versiones es posible integrar (o revertir) esas modificaciones de forma organizada y controlada.  
+  Además, el sistema de gestión de versiones nos permite **comparar el código de diferentes versiones** (pasadas o actuales), pudiendo identificar con precisión qué líneas de código fueron **agregadas, eliminadas o modificadas** en cada commit, lo cual facilita enormemente la depuración y el trabajo colaborativo.  
