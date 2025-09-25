@@ -1,4 +1,4 @@
-# 🧩 Acerca de Git y Github
+# 🧩 Introducción a Git y Github
 
 ## 📌 ¿Qué es Git?
 
@@ -56,8 +56,15 @@ Además, Git cuenta con **repositorios remotos**, que son **lugares en la nube d
 
 ---
 
-## 🚨 ¿Cuando comenzo a fallar y por que?
-Los sistemas de gestion de versiones como Git nos permiten tambien ver y detectar cuando empezo a fallar nuestrea aplicacion en caso de que ocurriese, por lo que si se van subiendo cambios de diversos compañeros del equipo dentro del mismo proyecto puede llegar a surgir un caso en que alguna funcionalidad falle, detectando dicho fallo leyendo el historial ya que este puede detectar en que momento se introdujo un fallo que hizo fallar nuestra aplicacion podineod volver a una version atras (rollback) o se puede detectar el inconveniente y solventarlo puntualmente haciendo una revision del historial, el cual
+## 🚨 ¿Cuándo comenzó a fallar y por qué?
+
+Uno de los grandes beneficios de un **sistema de gestión de versiones** como **Git** es que nos permite **detectar con precisión cuándo comenzó un error en nuestra aplicación**.  
+
+Cuando varios integrantes de un equipo van subiendo cambios a un mismo proyecto, es posible que en algún momento una funcionalidad deje de funcionar correctamente. Gracias al **historial de commits**, Git nos permite **revisar paso a paso las versiones anteriores del código**, identificar en qué momento se introdujo el fallo y, si es necesario, **volver a una versión estable** mediante un **rollback**.  
+
+Sin un sistema de control de versiones, esto no sería posible, ya que no contaríamos con un historial que indique **qué cambios se hicieron, cuándo y por quién**. En Git, cada commit funciona como una **copia de seguridad del estado del código en ese momento**, lo que nos brinda la capacidad de **avanzar o retroceder en el tiempo** según sea necesario.  
+
+💡 *Git nos da la capacidad de rastrear errores, corregirlos de manera eficiente y mantener la estabilidad de la aplicación sin perder el historial de nuestro trabajo.*
 
 ---
 
