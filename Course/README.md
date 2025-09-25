@@ -1,6 +1,6 @@
 # 🐙 Git & GitHub Course
 
-## 🔹 Git
+## 🧩 Git
 
 ### 📌 ¿Qué es Git?
 
