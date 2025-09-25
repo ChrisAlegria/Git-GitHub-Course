@@ -32,6 +32,8 @@ Podemos imaginar dos posibles escenarios: uno donde utilizamos un sistema de ges
 
   Supongamos que partimos de la **versión 0.1** (con header, barra lateral y footer). Luego añadimos botones, inputs y otros elementos, y guardamos esos cambios como la **versión 0.2**. La diferencia aquí es que **la versión 0.1 no se pierde**, ya que Git mantiene un historial completo de todo lo que hemos hecho.  
 
+  Lo importante es entender que cada vez que confirmamos un cambio, Git crea una especie de **“copia” del proyecto** (también llamada *snapshot*), que guarda todo el estado del código en ese momento. Así, aunque sigamos trabajando y modificando archivos, siempre podremos regresar a cualquiera de esas copias anteriores sin perder nada.  
+
   Si en algún momento alguien del equipo o el cliente solicita regresar al diseño inicial, simplemente podemos **volver a la versión 0.1 con un solo comando**, sin necesidad de eliminar manualmente los cambios realizados.  
 
   Otra gran ventaja es que con Git también podemos **comparar versiones de código** (por ejemplo, ver las diferencias entre la versión 0.1 y la 0.2). De esta manera, podemos identificar con precisión qué líneas se añadieron, modificaron o eliminaron en cada cambio.  
