@@ -1,6 +1,6 @@
 # 🐙 Git & GitHub Course
 
-## 🧩 Git
+## 🧩 Acerca de Git y Github
 
 ### 📌 ¿Qué es Git?
 
@@ -11,6 +11,14 @@ Los desarrolladores pueden **confirmar su trabajo localmente** y, a continuació
 Git es un **software que maneja versiones** y lo hace de manera **local**, directamente en el dispositivo donde estés trabajando. Esto permite **guardar capturas de distintas versiones** del código que desarrolles, facilitando el seguimiento de cambios y la colaboración con otros desarrolladores.  
 
 💡 *En resumen, Git te permite mantener un historial completo de tu proyecto, trabajar de manera organizada y segura, y colaborar eficientemente con otros desarrolladores.*  
+
+### 📌 ¿Qué es GitHub?
+
+**GitHub** es una **plataforma en línea** que utiliza el sistema de control de versiones **Git** para **alojar repositorios de código fuente** y facilitar la **colaboración en proyectos de desarrollo de software**. Fue fundada en **2008** por **Tom Preston-Werner, Chris Wanstrath, P. J. Hyett y Scott Chacon**, y desde entonces se ha convertido en una de las **herramientas más importantes y populares para desarrolladores en todo el mundo**.  
+
+En GitHub, los desarrolladores pueden **subir sus repositorios locales a la nube**, compartirlos con otros, trabajar de manera conjunta en el mismo proyecto, **gestionar ramas, issues, pull requests**, y mantener un historial completo de cambios accesible desde cualquier lugar.  
+
+💡 *En resumen, GitHub es la plataforma que lleva la potencia de Git a la nube, permitiendo a equipos de cualquier tamaño colaborar en tiempo real, mantener un flujo de trabajo más ordenado y centralizar sus proyectos de software en un solo lugar.*
 
 ---
 
@@ -32,7 +40,7 @@ Podemos imaginar dos posibles escenarios: uno donde utilizamos un sistema de ges
 
   Más adelante, si decidimos integrar **botones, inputs y más elementos de formulario** al HTML, al guardar podríamos tener la **versión 0.2**. A diferencia de cuando no contamos con un sistema de gestión de versiones, aquí **no se sustituye la versión 0.1**, sino que **todas las versiones anteriores permanecen almacenadas** en el historial del repositorio.  
 
-  De esta manera, si después de un tiempo —ya sea por una petición del cliente, motivos del equipo, decisión personal o incluso por un error— se nos solicita **volver al estado inicial** (con solo el header, la barra lateral y el footer), mediante Git tendríamos la posibilidad de regresar fácilmente a esa versión anterior. A este proceso se le conoce como **rollback**.  
+  De esta manera, si después de un tiempo, ya sea por una petición del cliente, motivos del equipo, decisión personal o incluso por un error se nos solicita **volver al estado inicial** (con solo el header, la barra lateral y el footer), mediante Git tendríamos la posibilidad de regresar fácilmente a esa versión anterior. A este proceso se le conoce como **rollback**.  
 
   Además, el sistema de gestión de versiones nos permite **comparar el código de diferentes versiones** (pasadas o actuales), pudiendo identificar con precisión qué líneas de código fueron **agregadas, eliminadas o modificadas** en cada commit, lo cual facilita enormemente la depuración y el trabajo colaborativo.  
 
@@ -47,3 +55,13 @@ Con **Git**, en cambio, podemos trabajar y crear nuestros **commits** de manera 
 Además, Git cuenta con **repositorios remotos**, que son **lugares en la nube donde se almacena el código y todas sus versiones**, siendo **GitHub** la plataforma más utilizada. Todos los integrantes del equipo pueden trabajar localmente, subir sus cambios cuando estén listos y **consultar todas las versiones existentes**.  
 
 💡 *Trabajar de manera local con Git permite que nunca se elimine accidentalmente el trabajo en el repositorio y que solo se suban los cambios que realmente están correctos y aprobados.*
+
+---
+
+### 🚨 ¿Cuando comenzo a fallar y por que?
+Los sistemas de gestion de versiones como Git nos permiten tambien ver y detectar cuando empezo a fallar nuestrea aplicacion en caso de que ocurriese, por lo que si se van subiendo cambios de diversos compañeros del equipo dentro del mismo proyecto puede llegar a surgir un caso en que alguna funcionalidad falle, detectando dicho fallo leyendo el historial ya que este puede detectar en que momento se introdujo un fallo que hizo fallar nuestra aplicacion podineod volver a una version atras (rollback) o se puede detectar el inconveniente y solventarlo puntualmente haciendo una revision del historial, el cual
+
+---
+
+
+
