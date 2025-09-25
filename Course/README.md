@@ -1,8 +1,6 @@
-# 🐙 Git & GitHub Course
+# 🧩 Acerca de Git y Github
 
-## 🧩 Acerca de Git y Github
-
-### 📌 ¿Qué es Git?
+## 📌 ¿Qué es Git?
 
 **Git** es un **sistema de control de versiones distribuido** creado por **Linus Torvalds** en 2005. Con el tiempo, se ha convertido en una herramienta **fundamental para la gestión de código fuente** en proyectos de programación colaborativa. Esto significa que **un clon local del proyecto es un repositorio de control de versiones completo**, lo que permite trabajar **sin conexión o de manera remota** con facilidad.  
 
@@ -12,7 +10,7 @@ Git es un **software que maneja versiones** y lo hace de manera **local**, direc
 
 💡 *En resumen, Git te permite mantener un historial completo de tu proyecto, trabajar de manera organizada y segura, y colaborar eficientemente con otros desarrolladores.*  
 
-### 📌 ¿Qué es GitHub?
+## 📌 ¿Qué es GitHub?
 
 **GitHub** es una **plataforma en línea** que utiliza el sistema de control de versiones **Git** para **alojar repositorios de código fuente** y facilitar la **colaboración en proyectos de desarrollo de software**. Fue fundada en **2008** por **Tom Preston-Werner, Chris Wanstrath, P. J. Hyett y Scott Chacon**, y desde entonces se ha convertido en una de las **herramientas más importantes y populares para desarrolladores en todo el mundo**.  
 
@@ -22,7 +20,7 @@ En GitHub, los desarrolladores pueden **subir sus repositorios locales a la nube
 
 ---
 
-### ✅ Beneficios del uso de un sistema de gestión de versiones
+## ✅ Beneficios del uso de un sistema de gestión de versiones
 
 Existen diferentes beneficios cuando usamos un **sistema de gestión de versiones** como lo es **Git**, ya que cumple una función fundamental en el desarrollo de software. Esta herramienta nos ayuda a **gestionar y controlar los cambios** que realizamos en nuestro código, evitando errores y pérdidas de información.  
 
@@ -46,7 +44,7 @@ Podemos imaginar dos posibles escenarios: uno donde utilizamos un sistema de ges
 
 ---
 
-### 👥 Trabajo en equipo
+## 👥 Trabajo en equipo
 
 Los sistemas de gestión de versiones nos permiten **trabajar de manera más eficiente en equipo**. Aunque se podría trabajar directamente, por ejemplo, en **Google Drive**, donde el código se actualiza en tiempo real, este enfoque tiene varias desventajas: siempre se necesita **conexión a Internet**, y si un archivo se elimina por error, **se pierde para siempre**, y ninguno de los integrantes tendría una copia.  
 
@@ -58,7 +56,7 @@ Además, Git cuenta con **repositorios remotos**, que son **lugares en la nube d
 
 ---
 
-### 🚨 ¿Cuando comenzo a fallar y por que?
+## 🚨 ¿Cuando comenzo a fallar y por que?
 Los sistemas de gestion de versiones como Git nos permiten tambien ver y detectar cuando empezo a fallar nuestrea aplicacion en caso de que ocurriese, por lo que si se van subiendo cambios de diversos compañeros del equipo dentro del mismo proyecto puede llegar a surgir un caso en que alguna funcionalidad falle, detectando dicho fallo leyendo el historial ya que este puede detectar en que momento se introdujo un fallo que hizo fallar nuestra aplicacion podineod volver a una version atras (rollback) o se puede detectar el inconveniente y solventarlo puntualmente haciendo una revision del historial, el cual
 
 ---
