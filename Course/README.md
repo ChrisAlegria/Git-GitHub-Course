@@ -70,5 +70,13 @@ Sin un sistema de control de versiones, esto no sería posible, ya que no contar
 
 # ⚙️ Git Config
 
+## 🖳 Terminal de Git
+
+Si bien **Git** es un **sistema de gestión de versiones**, es importante mencionar que se trata de un **programa que debe instalarse** en nuestro equipo. Al hacerlo, no solo obtenemos la herramienta principal, sino también una **terminal propia** en la cual podremos ejecutar **comandos específicos** para trabajar con nuestros proyectos.  
+
+Desde esta consola podemos realizar diversas acciones como **crear commits**, **subir cambios a GitHub**, **configurar nuestro usuario**, **crear ramas**, entre muchas otras operaciones que nos permiten tener un control detallado del flujo de trabajo.  
+
+Por otro lado, es importante destacar que algunos entornos de desarrollo como **Visual Studio Code** incluyen herramientas gráficas que facilitan la gestión de Git. Esto significa que podemos **confirmar cambios, crear ramas o sincronizar nuestro repositorio** sin necesidad de escribir comandos en la terminal, lo cual resulta muy práctico para quienes prefieren una interfaz más visual.  
+
 
 
