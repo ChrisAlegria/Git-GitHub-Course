@@ -105,16 +105,16 @@ El parámetro **`user`** en Git nos permite declarar **dos opciones diferentes**
 - **`user.name`:**  
   Para especificar nuestro **nombre** en Git utilizamos el comando `user.name`. Aquí, `user` hace referencia a la configuración de nuestro usuario, y `.name` indica que vamos a declarar nuestro nombre. El comando se ejecuta junto con comillas, dentro de las cuales colocaremos nuestro nombre, por ejemplo:  
 
-```bash
-git config user.name "ChristianAR"
-```
+  ```bash
+  git config user.name "ChristianAR"
+  ```
 
 - **`user.email`:**
   Para especificar nuestro correo electrónico en Git utilizamos el comando `user.email`. Al igual que antes, `user` indica la configuración del usuario y `.email` señala que vamos a declarar nuestro correo. Es importante que este correo coincida con el que usaremos en nuestro repositorio remoto (GitHub, GitLab, Gitea, etc.), de lo contrario, podrían generarse errores al sincronizar los commits. El comando se ejecuta con comillas, dentro de las cuales colocaremos nuestro correo, por ejemplo:
 
-```bash
-  git config user.email "christian.alegriar@gmail.com"
-```
+  ```bash
+    git config user.email "christian.alegriar@gmail.com"
+  ```
 
 ## 🖥 Core
 
@@ -129,10 +129,11 @@ Por lo que el parámetro `core` controla aspectos esenciales del funcionamiento 
 
   En el caso de **Visual Studio Code**, su comando de apertura es `code`. Para configurarlo como nuestro editor predeterminado en Git, ejecutaríamos el siguiente comando:
 
-```bash
-git config core.editor "code"
-```
+  ```bash
+  git config core.editor "code"
+  ```
 
   ⚠️ *OJO: Configurar un editor externo en Git no significa que vayamos a ejecutar los comandos desde ese editor (como git commit o git push). Lo que hace es que, cuando Git necesite que escribamos algo que la consola no maneja cómodamente (por ejemplo, un mensaje de commit largo, una descripción detallada en un merge o la edición de configuraciones internas), en lugar de usar la terminal, se abrirá automáticamente el editor que hayamos configurado.*
+
 
   - **`--wait`:** El Comando `--wait` en `core.editor "--wait"`, nos permite especificar a Git
