@@ -175,3 +175,6 @@ Al ejecutar cualquiera de estos comandos nuestro editor de código abrirá un ar
 	remote = origin
 	merge = refs/heads/main
 ```
+
+## 📑 Archivo de configuracíon
+
