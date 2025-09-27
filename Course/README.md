@@ -136,4 +136,15 @@ Por lo que el parámetro `core` controla aspectos esenciales del funcionamiento 
   ⚠️ *OJO: Configurar un editor externo en Git no significa que vayamos a ejecutar los comandos desde ese editor (como git commit o git push). Lo que hace es que, cuando Git necesite que escribamos algo que la consola no maneja cómodamente (por ejemplo, un mensaje de commit largo, una descripción detallada en un merge o la edición de configuraciones internas), en lugar de usar la terminal, se abrirá automáticamente el editor que hayamos configurado.*
 
 
-  - **`--wait`:** El Comando `--wait` en `core.editor "--wait"`, nos permite especificar a Git
+  - **`--wait`:**  
+    El parámetro **`--wait`** se utiliza junto con `core.editor`, por ejemplo: `core.editor "code --wait"`. Su función es **indicarle a Git que debe esperar a que el editor externo termine de realizar la acción antes de continuar con el comando**.  
+  
+    Como mencionamos antes, Git abre editores externos para ciertos casos especiales, como escribir mensajes de commit largos o resolver conflictos. Sin embargo, en ocasiones Git puede **interpretar incorrectamente que ya hemos terminado**, ejecutando el comando **antes de que realmente hayamos ingresado la información necesaria** en el editor. Esto puede generar errores o commits vacíos.  
+  
+    El uso de `--wait` **soluciona este problema**, obligando a Git a **esperar hasta que guardemos y cerremos el editor externo** antes de ejecutar el comando correspondiente. De esta manera, se asegura que todo lo que necesitamos ingresar en el editor sea procesado correctamente por Git.  
+  
+    El comando completo para configurar Visual Studio Code como editor predeterminado y usar `--wait` sería:  
+  
+    ```bash
+    git config core.editor "code --wait"
+    ```
