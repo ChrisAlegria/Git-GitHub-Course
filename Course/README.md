@@ -105,16 +105,16 @@ El parámetro **`user`** en Git nos permite declarar **dos opciones diferentes**
 - **`user.name`:**  
   Para especificar nuestro **nombre** en Git utilizamos el comando `user.name`. Aquí, `user` hace referencia a la configuración de nuestro usuario, y `.name` indica que vamos a declarar nuestro nombre. El comando se ejecuta junto con comillas, dentro de las cuales colocaremos nuestro nombre, por ejemplo:  
 
-```bash
-git config user.name "ChristianAR"
-```
+  ```bash
+  git config user.name "ChristianAR"
+  ```
 
 - **`user.email`:**
   Para especificar nuestro correo electrónico en Git utilizamos el comando `user.email`. Al igual que antes, `user` indica la configuración del usuario y `.email` señala que vamos a declarar nuestro correo. Es importante que este correo coincida con el que usaremos en nuestro repositorio remoto (GitHub, GitLab, Gitea, etc.), de lo contrario, podrían generarse errores al sincronizar los commits. El comando se ejecuta con comillas, dentro de las cuales colocaremos nuestro correo, por ejemplo:
 
-```bash
-  git config user.email "christian.alegriar@gmail.com"
-```
+  ```bash
+    git config user.email "christian.alegriar@gmail.com"
+  ```
 
 ## 🖥 Core
 
@@ -129,11 +129,53 @@ Por lo que el parámetro `core` controla aspectos esenciales del funcionamiento 
 
   En el caso de **Visual Studio Code**, su comando de apertura es `code`. Para configurarlo como nuestro editor predeterminado en Git, ejecutaríamos el siguiente comando:
 
-```bash
-git config core.editor "code"
-```
+  ```bash
+  git config core.editor "code"
+  ```
 
   ⚠️ *OJO: Configurar un editor externo en Git no significa que vayamos a ejecutar los comandos desde ese editor (como git commit o git push). Lo que hace es que, cuando Git necesite que escribamos algo que la consola no maneja cómodamente (por ejemplo, un mensaje de commit largo, una descripción detallada en un merge o la edición de configuraciones internas), en lugar de usar la terminal, se abrirá automáticamente el editor que hayamos configurado.*
 
-  - **`--wait`:** El Comando `--wait` en `core.editor "--wait"`, nos permite especificar a Git
+
+  - **`--wait`:**  
+    El parámetro **`--wait`** se utiliza junto con `core.editor`, por ejemplo: `core.editor "code --wait"`. Su función es **indicarle a Git que debe esperar a que el editor externo termine de realizar la acción antes de continuar con el comando**.  
+  
+    Como mencionamos antes, Git abre editores externos para ciertos casos especiales, como escribir mensajes de commit largos o resolver conflictos. Sin embargo, en ocasiones Git puede **interpretar incorrectamente que ya hemos terminado**, ejecutando el comando **antes de que realmente hayamos ingresado la información necesaria** en el editor. Esto puede generar errores o commits vacíos.  
+  
+    El uso de `--wait` **soluciona este problema**, obligando a Git a **esperar hasta que guardemos y cerremos el editor externo** antes de ejecutar el comando correspondiente. De esta manera, se asegura que todo lo que necesitamos ingresar en el editor sea procesado correctamente por Git. Por lo que el comando completo para configurar Visual Studio Code como editor predeterminado y usar `--wait` sería:  
+  
+    ```bash
+    git config core.editor "code --wait"
+    ```
+
+## ✏️ Edit
+
+El parámetro **`--edit`**, abreviado como **`-e`**, nos permite **editar archivos de configuración** en Git. Dentro de `git config`, este parámetro nos facilita **verificar nuestras configuraciones actuales**, ya sea a nivel de proyecto o de manera global, y **modificarlas si así lo deseamos**.  
+
+Cuando usamos **`git config -e`** o **`git config --edit`**, Git abre nuestro **editor de código externo** mostrando un archivo con toda nuestra configuración según corresponda (por proyecto o global). Este archivo incluye información como el **nombre de usuario**, **correo electrónico**, **origen del repositorio remoto**, **editor predeterminado**, entre otras configuraciones importantes. Ademas cabe mencionar que tanto la forma completa como la abreviada pueden ser ejecutadas y teniendo ambas la misma funcion, siendo las siguientes:
+
+```bash
+git config -e
+git config --edit
+```
+
+Al ejecutar cualquiera de estos comandos nuestro editor de código abrirá un archivo similar al siguiente, donde podremos comprobar y modificar nuestras configuraciones:
+```bash
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+	editor = code --wait
+[remote "origin"]
+	url = https://github.com/ChrisAlegria/Git-GitHub-Course.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+```
+
+## 📑 Archivo de configuracíon
+
 
