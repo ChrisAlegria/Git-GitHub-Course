@@ -136,3 +136,4 @@ git config core.editor "code"
   ⚠️ *OJO: Configurar un editor externo en Git no significa que vayamos a ejecutar los comandos desde ese editor (como git commit o git push). Lo que hace es que, cuando Git necesite que escribamos algo que la consola no maneja cómodamente (por ejemplo, un mensaje de commit largo, una descripción detallada en un merge o la edición de configuraciones internas), en lugar de usar la terminal, se abrirá automáticamente el editor que hayamos configurado.*
 
   - **`--wait`:** El Comando `--wait` en `core.editor "--wait"`, nos permite especificar a Git
+
