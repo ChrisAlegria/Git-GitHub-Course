@@ -78,31 +78,7 @@ Desde esta consola podemos realizar diversas acciones como **crear commits**, **
 
 Por otro lado, algunos entornos de desarrollo como **Visual Studio Code** incluyen herramientas gráficas que facilitan la gestión de Git. Esto significa que podemos **confirmar cambios, crear ramas o sincronizar nuestro repositorio** sin necesidad de escribir comandos en la terminal, lo cual resulta muy práctico para quienes prefieren una interfaz más visual.  
 
-Ahora bien, existen dentro de la terminal ciertos **comandos especiales** que pueden ser usados en cualquier momento, por ejemplo, para aplicar configuraciones a todos nuestros proyectos, solicitar ayudas, realizar ediciones y más. Son **comandos clave** que se utilizan prácticamente en cualquier situación del entorno. Algunos de ellos son:
-
-- **`--edit` / `-e`:**  
-  El parámetro `--edit`, que también podemos usar en su forma corta como `-e`, nos permite **editar cualquier archivo de configuración**. Un ejemplo de esto es `core`, un archivo donde se guardan las configuraciones de nuestros proyectos. Si ejecutamos `git config core -e`, se abrirá dicho archivo para **realizar modificaciones manualmente** de manera directa. Por lo que un ejemplo de este seria:
-
-  ```bash
-  git config -e
-  ```
-
-- **`--help` / `-h`:**  
-  El parámetro `--help`, que también puede usarse como `-h`, nos permite **solicitar ayuda a Git**. Al ingresar este comando, se mostrará una **lista de los posibles comandos disponibles** que podemos utilizar. Por ejemplo, `git config -h` nos mostrará todos los comandos disponibles para `git config`, y esto aplica de manera similar para cualquier otro comando o apartado. Por lo que un ejemplo de este seria:
-
-  ```bash
-  git config -h
-  ```
-
-- **`--list`:**  
-  Comúnmente, para verificar información en algún archivo solemos usar `-e` para abrirlo y revisar manualmente su contenido. Con el comando o parámetro `--list`, podemos **extraer directamente la información del archivo** y mostrarla en la consola, sin necesidad de abrirlo manualmente. Esto facilita la **consulta rápida de configuraciones** y datos relevantes. Por lo que un ejemplo de este seria:
-
-  ```bash
-  git config --list
-  ```
-
-- **`clear`** 🧹  
-  El comando `clear` nos permite **limpiar la consola**, eliminando todos los comandos previos y cualquier salida que se haya mostrado en pantalla. Esto no **afecta en absoluto los archivos, configuraciones ni el estado de nuestro proyecto**, simplemente nos ofrece una **pantalla limpia** para continuar trabajando de manera ordenada. 
+💡 *La terminal de Git es la herramienta más completa para interactuar con el sistema, y abrirla en la carpeta correcta nos permite ejecutar acciones directamente sobre su contenido, mientras que los entornos gráficos ofrecen una alternativa más sencilla y accesible.*
 
 ---
 
@@ -231,4 +207,52 @@ Cuando creamos un proyecto para trabajar con un sistema de gestión de versiones
 
 💡 *En resumen, el archivo `.gitconfig` es el lugar donde Git centraliza todas las configuraciones necesarias para que podamos trabajar de manera ordenada y personalizada en cada proyecto.*
 
-# 📟 Comandos Basicos Terminal 
+# 📟 Comandos Básicos de la Terminal  
+
+Existen diversos **comandos básicos** dentro de la **consola/terminal de Git**, los cuales están basados en los **comandos de Linux**. Estos comandos se pueden utilizar en diferentes momentos y resultan muy útiles para tareas como **ayuda, edición, modificación y gestión general** dentro del entorno de trabajo. La gran ventaja es que la mayoría de ellos son **universales**, es decir, pueden usarse en cualquier proyecto y en prácticamente cualquier situación, ya sea para **aplicar configuraciones globales, solicitar ayuda, realizar ediciones o limpiar la consola**. Son, en definitiva, **comandos clave** que todo desarrollador debe dominar para desenvolverse de manera más eficiente al trabajar con Git.  Por lo que algunos de los más comunes son: 
+
+- **`--edit` / `-e`:**  
+  El parámetro `--edit`, que también podemos usar en su forma corta como `-e`, nos permite **editar cualquier archivo de configuración**. Un ejemplo de esto es `core`, un archivo donde se guardan las configuraciones de nuestros proyectos. Si ejecutamos `git config core -e`, se abrirá dicho archivo para **realizar modificaciones manualmente** de manera directa. Por lo que un ejemplo de este seria:
+
+  ```bash
+  git config -e
+  ```
+
+- **`--help` / `-h`:**  
+  El parámetro `--help`, que también puede usarse como `-h`, nos permite **solicitar ayuda a Git**. Al ingresar este comando, se mostrará una **lista de los posibles comandos disponibles** que podemos utilizar. Por ejemplo, `git config -h` nos mostrará todos los comandos disponibles para `git config`, y esto aplica de manera similar para cualquier otro comando o apartado. Por lo que un ejemplo de este seria:
+
+  ```bash
+  git config -h
+  ```
+
+- **`--list`:**  
+  Comúnmente, para verificar información en algún archivo solemos usar `-e` para abrirlo y revisar manualmente su contenido. Con el comando o parámetro `--list`, podemos **extraer directamente la información del archivo** y mostrarla en la consola, sin necesidad de abrirlo manualmente. Esto facilita la **consulta rápida de configuraciones** y datos relevantes. Por lo que un ejemplo de este seria:
+
+  ```bash
+  git config --list
+  ```
+
+- **`clear`** 
+  El comando `clear` nos permite **limpiar la consola**, eliminando todos los comandos previos y cualquier salida que se haya mostrado en pantalla. Esto no **afecta en absoluto los archivos, configuraciones ni el estado de nuestro proyecto**, simplemente nos ofrece una **pantalla limpia** para continuar trabajando de manera ordenada.
+
+- **`ls`:**  
+El comando `ls` nos permite **visualizar el listado de archivos y carpetas** que se encuentran en el directorio donde hayamos abierto la terminal. Por ejemplo, si abrimos la terminal en una carpeta llamada `proyecto` y ejecutamos `ls`, se desplegarán todas las carpetas y archivos que estén dentro de ella. De esta manera, el comando muestra de forma clara el contenido del directorio actual, lo que nos ayuda a ubicar los recursos disponibles sin necesidad de salir de la terminal. Un ejemplo de su uso sería:  
+
+  ```bash
+  chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/Git-GitHub-Course (main)
+  $ ls
+  Course/  Practices/  README.md
+
+  ```
+
+- **`cd`:**  
+El comando `cd` (change directory) se utiliza para **movernos entre carpetas** desde la terminal. Por defecto, todos los comandos que ejecutamos en la terminal afectan a la **carpeta en la que nos encontramos actualmente** y, según el caso, a todas las subcarpetas que esta contenga. Por ejemplo, si estamos ubicados en una carpeta llamada `proyecto`, que a su vez contiene dos subcarpetas llamadas `proyecto_1` y `proyecto_2`, cualquier acción que ejecutemos tendrá efecto en `proyecto`.  Ahora bien, si lo que queremos es **acceder a una subcarpeta específica** para trabajar directamente en ella, usamos el comando `cd`. Basta con escribir `cd` seguido del nombre de la carpeta a la que deseamos entrar. Una vez ejecutado, la terminal cambiará su ubicación a esa carpeta, quedando de la siguiente manera:  
+
+  ```bash
+  chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/Git-GitHub-Course (main)
+  $ cd course
+
+  chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/Git-GitHub-Course/course (main)
+  $
+
+
