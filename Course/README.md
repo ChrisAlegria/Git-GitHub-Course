@@ -147,6 +147,31 @@ Por lo que el parámetro `core` controla aspectos esenciales del funcionamiento 
     git config core.editor "code --wait"
     ```
 
+- **`core.autocrlf`:**  
+  La mayoría de los servidores de repositorios remotos como **GitHub**, **GitLab** y otros funcionan en entornos **Linux/Unix**, lo que provoca que los **saltos de línea** se manejen de forma diferente en comparación con **Windows**.  
+
+  Aquí es donde entra en juego el parámetro **`core.autocrlf`**, el cual nos permite **indicar a Git cómo manejar automáticamente los saltos de línea según el sistema operativo que estemos usando**.  
+
+  Aunque Git suele detectar nuestro sistema operativo de forma automática, es recomendable **configurarlo manualmente** para evitar errores en los archivos al momento de compartir código con otros desarrolladores que trabajen en sistemas diferentes. Si no lo configuramos correctamente, pueden generarse **conflictos de formato** en los archivos, lo que complica el trabajo colaborativo. Por lo que la estructura básica es la siguiente:  
+
+  ```bash
+  git config core.autocrlf <valorSegunSistemaOperativo>
+  ```
+
+  Donde **`<valorSegunSistemaOperativo>`** puede variar según nuestro entorno:
+
+  - **En Windows:** normalmente se utiliza `true`, quedando como:
+    ```bash
+  	git config core.autocrlf true
+  	```
+    
+  - **En Linux/Unix o macOS:** generalmente se utiliza `input`,quedando como:
+    ```bash
+  	git config core.autocrlf input
+  	``` 
+
+  💡 *core.autocrlf nos ayuda a que los saltos de línea se mantengan consistentes entre diferentes sistemas operativos, evitando errores y asegurando que el código sea legible y funcional sin importar desde dónde se edite.*
+
 ## ✏️ Edit
 
 El parámetro **`--edit`**, abreviado como **`-e`**, nos permite **editar archivos de configuración** en Git. Dentro de `git config`, este parámetro nos facilita **verificar nuestras configuraciones actuales**, ya sea a nivel de proyecto o de manera global, y **modificarlas si así lo deseamos**.  
@@ -181,6 +206,3 @@ Al ejecutar cualquiera de estos comandos nuestro editor de código abrirá un ar
 Cuando creamos un proyecto para trabajar con un sistema de gestión de versiones como **Git**, se genera un archivo llamado **`.gitconfig`**, el cual contiene toda la configuración que el proyecto está utilizando. Este archivo puede reflejar tanto configuraciones específicas del proyecto como configuraciones globales aplicadas a todo el sistema, y estará siempre presente en los repositorios que gestionemos con Git. En él se almacenan parámetros importantes como el **editor de texto predeterminado**, el **nombre de usuario**, el **correo electrónico** asociado y muchos otros ajustes que determinan el comportamiento de Git.  
 
 💡 *En resumen, el archivo `.gitconfig` es el lugar donde Git centraliza todas las configuraciones necesarias para que podamos trabajar de manera ordenada y personalizada en cada proyecto.*
-
-
-
