@@ -232,7 +232,7 @@ Existen diversos **comandos básicos** dentro de la **consola/terminal de Git**,
   git config --list
   ```
 
-- **`clear`** 
+- **`clear`:**   
   El comando `clear` nos permite **limpiar la consola**, eliminando todos los comandos previos y cualquier salida que se haya mostrado en pantalla. Esto no **afecta en absoluto los archivos, configuraciones ni el estado de nuestro proyecto**, simplemente nos ofrece una **pantalla limpia** para continuar trabajando de manera ordenada.
 
 - **`ls`:**  
