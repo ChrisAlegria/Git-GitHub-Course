@@ -100,7 +100,10 @@ Ahora bien, existen dentro de la terminal ciertos **comandos especiales** que pu
   ```bash
   git config list
   ```
-  
+
+- **`clear`** 🧹  
+  El comando `clear` nos permite **limpiar la consola**, eliminando todos los comandos previos y cualquier salida que se haya mostrado en pantalla. Esto no **afecta en absoluto los archivos, configuraciones ni el estado de nuestro proyecto**, simplemente nos ofrece una **pantalla limpia** para continuar trabajando de manera ordenada. 
+
 ---
 
 # ⚙️ Git Config
