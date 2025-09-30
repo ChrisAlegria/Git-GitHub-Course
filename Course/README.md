@@ -242,7 +242,6 @@ El comando `ls` nos permite **visualizar el listado de archivos y carpetas** que
   chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/Git-GitHub-Course (main)
   $ ls
   Course/  Practices/  README.md
-
   ```
 
 - **`cd`:**  
@@ -255,4 +254,9 @@ El comando `cd` (change directory) se utiliza para **movernos entre carpetas** d
   chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/Git-GitHub-Course/course (main)
   $
 
+- **`pwd`:**  
+El comando 
+
+  ```bash
+  ```
 
