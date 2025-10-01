@@ -1,7 +1,5 @@
 # 🧩 Introducción a Git y Github
-
 ## 📌 ¿Qué es Git?
-
 **Git** es un **sistema de control de versiones distribuido** creado por **Linus Torvalds** en 2005. Con el tiempo, se ha convertido en una herramienta **fundamental para la gestión de código fuente** en proyectos de programación colaborativa. Esto significa que **un clon local del proyecto es un repositorio de control de versiones completo**, lo que permite trabajar **sin conexión o de manera remota** con facilidad.  
 
 Los desarrolladores pueden **confirmar su trabajo localmente** y, a continuación, **sincronizar su copia del repositorio con la copia en el servidor**. Este enfoque es distinto del control de versiones centralizado, donde los clientes deben sincronizar el código con un servidor antes de crear nuevas versiones.  
@@ -11,7 +9,6 @@ Git es un **software que maneja versiones** y lo hace de manera **local**, direc
 💡 *En resumen, Git te permite mantener un historial completo de tu proyecto, trabajar de manera organizada y segura, y colaborar eficientemente con otros desarrolladores.*  
 
 ## 📌 ¿Qué es GitHub?
-
 **GitHub** es una **plataforma en línea** que utiliza el sistema de control de versiones **Git** para **alojar repositorios de código fuente** y facilitar la **colaboración en proyectos de desarrollo de software**. Fue fundada en **2008** por **Tom Preston-Werner, Chris Wanstrath, P. J. Hyett y Scott Chacon**, y desde entonces se ha convertido en una de las **herramientas más importantes y populares para desarrolladores en todo el mundo**.  
 
 En GitHub, los desarrolladores pueden **subir sus repositorios locales a la nube**, compartirlos con otros, trabajar de manera conjunta en el mismo proyecto, **gestionar ramas, issues, pull requests**, y mantener un historial completo de cambios accesible desde cualquier lugar.  
@@ -21,7 +18,6 @@ En GitHub, los desarrolladores pueden **subir sus repositorios locales a la nube
 ---
 
 ## ✅ Beneficios del uso de un sistema de gestión de versiones
-
 Existen diferentes beneficios cuando usamos un **sistema de gestión de versiones** como lo es **Git**, ya que cumple una función fundamental en el desarrollo de software. Esta herramienta nos ayuda a **gestionar y controlar los cambios** que realizamos en nuestro código, evitando errores y pérdidas de información.  
 
 Podemos imaginar dos posibles escenarios: uno donde utilizamos un sistema de gestión de versiones y otro donde no lo usamos.  
@@ -45,7 +41,6 @@ Podemos imaginar dos posibles escenarios: uno donde utilizamos un sistema de ges
 ---
 
 ## 👥 Trabajo en equipo
-
 Los sistemas de gestión de versiones nos permiten **trabajar de manera más eficiente en equipo**. Aunque se podría trabajar directamente, por ejemplo, en **Google Drive**, donde el código se actualiza en tiempo real, este enfoque tiene varias desventajas: siempre se necesita **conexión a Internet**, y si un archivo se elimina por error, **se pierde para siempre**, y ninguno de los integrantes tendría una copia.  
 
 Con **Git**, en cambio, podemos trabajar y crear nuestros **commits** de manera **local** en nuestro dispositivo, y posteriormente **subir esos cambios al servidor** cuando queramos. Esto permite **controlar exactamente qué cambios se comparten**, evitando pérdidas accidentales de información.  
@@ -57,7 +52,6 @@ Además, Git cuenta con **repositorios remotos**, que son **lugares en la nube d
 ---
 
 ## 🚨 ¿Cuándo comenzó a fallar y por qué?
-
 Uno de los grandes beneficios de un **sistema de gestión de versiones** como **Git** es que nos permite **detectar con precisión cuándo comenzó un error en nuestra aplicación**.  
 
 Cuando varios integrantes de un equipo van subiendo cambios a un mismo proyecto, es posible que en algún momento una funcionalidad deje de funcionar correctamente. Gracias al **historial de commits**, Git nos permite **revisar paso a paso las versiones anteriores del código**, identificar en qué momento se introdujo el fallo y, si es necesario, **volver a una versión estable** mediante un **rollback**.  
@@ -69,7 +63,6 @@ Sin un sistema de control de versiones, esto no sería posible, ya que no contar
 ---
 
 ## 🖳 Terminal de Git
-
 Si bien **Git** es un **sistema de gestión de versiones**, es importante mencionar que se trata de un **programa que debe instalarse** en nuestro equipo. Al hacerlo, no solo obtenemos la herramienta principal, sino también una **terminal propia** llamada **Git Bash**, en la cual podremos ejecutar **comandos específicos** para trabajar con nuestros proyectos.  
 
 Para abrirla, simplemente podemos buscar **"Git Bash"** en la barra de búsqueda de Windows. Otra opción muy práctica es **hacer clic derecho en cualquier carpeta** y seleccionar **"Git Bash Here"**, lo cual abrirá la terminal directamente en esa ubicación. Esto es especialmente útil porque **cualquier acción que realicemos desde Git afectará al contenido de la carpeta actual**, como inicializar un repositorio, confirmar cambios, crear ramas o subir código a un repositorio remoto.  
@@ -83,13 +76,11 @@ Por otro lado, algunos entornos de desarrollo como **Visual Studio Code** incluy
 ---
 
 # ⚙️ Git Config
-
 El comando **`git config`** se utiliza dentro de la **terminal de Git** y nos permite **realizar configuraciones importantes** para que la terminal sepa cómo manejar nuestro entorno. Gracias a este comando, podemos **personalizar Git según nuestras necesidades**, especificando información como **nombre de usuario, correo electrónico**, editor de texto predeterminado, colores en la terminal y otros parámetros que Git utilizará en nuestros commits y repositorios.  
 
 Estas configuraciones son esenciales porque Git utiliza esta información para **identificar al autor de los commits** y mantener un historial organizado y claro, especialmente cuando trabajamos en **proyectos colaborativos**.  
 
 ## 🌐 --global
-
 El parámetro **`--global`** se usa junto con el comando `git config`, quedando de la forma:  
 
 ```bash
@@ -99,7 +90,6 @@ git config --global
 Al usar **`--global`**, le estamos indicando a Git que las configuraciones que definamos afectarán a todos los proyectos en nuestro equipo que utilicen Git, y no solo al repositorio en el que estemos trabajando actualmente. Esto es especialmente útil para establecer información general, como nuestro nombre o correo electrónico, que se aplicará automáticamente en todos los commits que realicemos.
 
 ## 🧑🏻‍💻 User
-
 El parámetro **`user`** en Git nos permite declarar **dos opciones diferentes**: nuestro **nombre** y nuestro **correo electrónico**. Ambas son de **suma importancia** cuando se trabaja de manera colaborativa, ya que todos nuestros **commits** se registrarán con esta información. De esta forma, cualquier persona que consulte el historial de cambios en plataformas como **GitHub** podrá identificar **quién realizó cada acción** y con qué correo asociado.  
 
 - **`user.name`:**  
@@ -117,7 +107,6 @@ El parámetro **`user`** en Git nos permite declarar **dos opciones diferentes**
   ```
 
 ## 🖥 Core
-
 El parámetro **`core`** en Git hace referencia al **núcleo del sistema**, es decir, a aquellas configuraciones que afectan directamente el **funcionamiento fundamental de Git**. A través de este parámetro podemos establecer ajustes esenciales que determinan cómo se comporta Git en nuestro entorno de trabajo.  
 
 Por lo que el parámetro `core` controla aspectos esenciales del funcionamiento de Git, como el editor por defecto, el manejo de archivos y el comportamiento interno del sistema, permitiéndonos personalizar la experiencia de trabajo según nuestras necesidades.
@@ -173,7 +162,6 @@ Por lo que el parámetro `core` controla aspectos esenciales del funcionamiento 
   💡 *core.autocrlf nos ayuda a que los saltos de línea se mantengan consistentes entre diferentes sistemas operativos, evitando errores y asegurando que el código sea legible y funcional sin importar desde dónde se edite.*
 
 ## ✏️ Edit
-
 El parámetro **`--edit`**, abreviado como **`-e`**, nos permite **editar archivos de configuración** en Git. Dentro de `git config`, este parámetro nos facilita **verificar nuestras configuraciones actuales**, ya sea a nivel de proyecto o de manera global, y **modificarlas si así lo deseamos**.  
 
 Cuando usamos **`git config -e`** o **`git config --edit`**, Git abre nuestro **editor de código externo** mostrando un archivo con toda nuestra configuración según corresponda (por proyecto o global). Este archivo incluye información como el **nombre de usuario**, **correo electrónico**, **origen del repositorio remoto**, **editor predeterminado**, entre otras configuraciones importantes. Ademas cabe mencionar que tanto la forma completa como la abreviada pueden ser ejecutadas y teniendo ambas la misma funcion, siendo las siguientes:
@@ -202,13 +190,11 @@ Al ejecutar cualquiera de estos comandos nuestro editor de código abrirá un ar
 ```
 
 ## 📑 Archivo de configuración  
-
 Cuando creamos un proyecto para trabajar con un sistema de gestión de versiones como **Git**, se genera un archivo llamado **`.gitconfig`**, el cual contiene toda la configuración que el proyecto está utilizando. Este archivo puede reflejar tanto configuraciones específicas del proyecto como configuraciones globales aplicadas a todo el sistema, y estará siempre presente en los repositorios que gestionemos con Git. En él se almacenan parámetros importantes como el **editor de texto predeterminado**, el **nombre de usuario**, el **correo electrónico** asociado y muchos otros ajustes que determinan el comportamiento de Git.  
 
 💡 *En resumen, el archivo `.gitconfig` es el lugar donde Git centraliza todas las configuraciones necesarias para que podamos trabajar de manera ordenada y personalizada en cada proyecto.*
 
 # 📟 Comandos Básicos de la Terminal  
-
 Existen diversos **comandos básicos** dentro de la **consola/terminal de Git**, los cuales están basados en los **comandos de Linux**. Estos comandos se pueden utilizar en diferentes momentos y resultan muy útiles para tareas como **ayuda, edición, modificación y gestión general** dentro del entorno de trabajo. La gran ventaja es que la mayoría de ellos son **universales**, es decir, pueden usarse en cualquier proyecto y en prácticamente cualquier situación, ya sea para **aplicar configuraciones globales, solicitar ayuda, realizar ediciones o limpiar la consola**. Son, en definitiva, **comandos clave** que todo desarrollador debe dominar para desenvolverse de manera más eficiente al trabajar con Git.  Por lo que algunos de los más comunes son: 
 
 - **`--edit` / `-e`:**  
@@ -311,4 +297,33 @@ Desde la terminal podemos **abrir directamente nuestro editor de código** en el
   chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/proyectos
   $ code .
   ```
+
+# 〰️ Flujo de Git  
+Git trabaja con un **flujo definido** en el cual nuestros archivos van **pasando por diferentes estados** hasta finalmente llegar al repositorio remoto (estado final).  
+
+En total, podemos identificar **4 estados principales** que conforman el flujo de trabajo de Git:  
+
+---
+
+1. **Local (sin marcar):**  
+   El primer paso dentro del flujo de Git sucede cuando tenemos nuestros archivos **locales** en una carpeta de proyecto. Para iniciar este proceso, ejecutamos el comando **`git init`**, con lo cual damos de alta nuestro proyecto en Git. A partir de este momento, Git reconoce que ese directorio será gestionado bajo su sistema de control de versiones, aunque **aún no hace nada con los archivos**. En este estado, simplemente hemos **inicializado el repositorio**, pero los archivos siguen siendo locales sin ningún seguimiento activo.  
+
+---
+
+2. **Stage (marcados):**  
+   El segundo paso es el estado **Stage** (o “staging area”). Aquí usamos el comando **`git add .`**, lo que le indica a Git que tome nuestros archivos y los **marque** para que comiencen a ser rastreados. En este punto, Git crea una **copia temporal de los archivos** y empieza a observarlos. Eso significa que si los modificamos o eliminamos, Git detectará esos cambios. Es importante destacar que en esta etapa Git **no guarda todavía un historial permanente**, simplemente mantiene una **versión sincronizada temporal** de los archivos listos para ser confirmados. Si hacemos modificaciones y volvemos a ejecutar **`git add .`**, estas copias se actualizarán con los últimos cambios.  
+
+---
+
+3. **Commit (fotografiados):**  
+   Este paso es uno de los más importantes y muchas veces se confunde con Stage. La diferencia es que el **commit crea una versión oficial en el historial del repositorio**. Cuando ejecutamos **`git commit -m "mensaje"`**, Git toma los archivos que estaban en Stage (agregados con `git add .`) y los **almacena en el historial como un punto de guardado permanente**, con un mensaje que describe los cambios realizados. A diferencia de Stage, donde solo hay archivos preparados, en el commit ya tenemos una **fotografía exacta del proyecto en ese momento**, registrada de forma cronológica en el historial de versiones.  
+
+---
+
+4. **Remote (en el servidor):**  
+   Finalmente, llegamos al estado **Remote**, que representa el último paso del flujo de Git. Aquí tomamos las confirmaciones locales (commits) junto con su historial de cambios y las **subimos a un repositorio remoto**, como **GitHub, GitLab o Bitbucket**. Para ello utilizamos el comando **`git push`**, el cual envía toda la información al servidor remoto. Cabe destacar que para que esto funcione correctamente debemos haber **configurado previamente las credenciales** y conectado nuestro repositorio local al remoto.  
+
+---
+
+   
 
