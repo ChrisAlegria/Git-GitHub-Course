@@ -295,3 +295,20 @@ El comando `mkdir` (**make directory**) se utiliza para **crear nuevas carpetas 
   $
   ```
 
+- **`git init`:**  
+El comando `git init` se utiliza para **indicarle a Git que la carpeta en la que estamos trabajando será gestionada con su sistema de control de versiones**. Al ejecutar este comando, la carpeta actual se **convierte en un repositorio local de Git**, es decir, un espacio de trabajo donde podremos comenzar a llevar un **historial de cambios (commits)**, gestionar versiones y trabajar con ramas, aunque aún no esté vinculado a un repositorio remoto. En otras palabras, `git init` **inicializa un nuevo repositorio vacío** dentro de la carpeta en la que estamos, creando un directorio oculto llamado **`.git/`**, donde se almacenará toda la información y la configuración necesaria para el seguimiento de versiones. Un ejemplo práctico sería el siguiente:  
+
+  ```bash
+  chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/proyectos
+  $ git init
+  Initialized empty Git repository in D:/Trabajos/Cursos/proyectos/.git/
+  ```
+  
+- **`Abrir editor de código desde la consola`:**  
+Desde la terminal podemos **abrir directamente nuestro editor de código** en el directorio en el que nos encontremos trabajando. Esto es muy útil, ya que nos evita tener que buscar manualmente la carpeta desde la interfaz gráfica del editor. El comando que utilizaremos depende del editor que tengamos instalado. Por ejemplo, en el caso de **Visual Studio Code**, basta con escribir:  
+
+  ```bash
+  chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/proyectos
+  $ code .
+  ```
+
