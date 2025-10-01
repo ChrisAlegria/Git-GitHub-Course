@@ -253,10 +253,26 @@ El comando `cd` (change directory) se utiliza para **movernos entre carpetas** d
 
   chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/Git-GitHub-Course/course (main)
   $
+  ```
 
-- **`pwd`:**  
-El comando 
+- **`cd ..`:**  
+El comando `cd ..` se utiliza para **retroceder un nivel en el árbol de directorios**, es decir, salir de la carpeta en la que nos encontramos actualmente y volver a la carpeta que la contiene. En otras palabras, funciona como la operación **inversa a `cd`**, ya que en lugar de entrar en una subcarpeta, nos permite **regresar a la carpeta padre**. Por ejemplo, si estamos dentro de la carpeta `proyecto_1`, que a su vez está dentro de `proyectos`, al ejecutar `cd ..` volveremos directamente a `proyectos`. La terminal quedaría de la siguiente manera:  
 
   ```bash
+  chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/Git-GitHub-Course/course (main)
+  $ cd ..
+
+  chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/Git-GitHub-Course (main)
+  $
+  ```
+  
+- **`pwd`:**  
+El comando `pwd` (**print working directory**) se utiliza para **mostrar la ruta completa del directorio en el que nos encontramos actualmente** dentro de la terminal. Al ejecutarlo, Git Bash (o cualquier terminal basada en Linux) nos devuelve la **dirección absoluta** de la carpeta en la que estamos trabajando. Es importante no confundirlo con `ls`. Mientras que `pwd` nos indica **en qué carpeta estamos ubicados**, el comando `ls` lista los **archivos y subcarpetas que contiene el directorio actual**. Por ejemplo, si queremos confirmar nuestra ubicación dentro de la estructura de carpetas, podríamos obtener algo como lo siguiente:  
+
+  ```bash
+  chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/Git-GitHub-Course (main)
+  $ pwd
+  /d/Trabajos/Cursos/Git-GitHub-Course
+  $
   ```
 
