@@ -244,6 +244,16 @@ El comando `ls` nos permite **visualizar el listado de archivos y carpetas** que
   Course/  Practices/  README.md
   ```
 
+  - **`-a`:**  
+  La opción `-a` (**all**) se utiliza junto con el comando `ls` para **mostrar todos los archivos y directorios**, incluyendo aquellos que están **ocultos**. En los sistemas basados en Linux (como Git Bash), los archivos ocultos son aquellos cuyo nombre comienza con un punto (`.`), por ejemplo: `.git`, `.env`, `.config`. De manera predeterminada, el comando `ls` no los muestra, pero al usar `ls -a` sí aparecerán en la lista. Esto resulta muy útil cuando queremos **ver archivos de configuración internos** que normalmente no son visibles, ya que muchos proyectos contienen carpetas y archivos ocultos que son esenciales para su funcionamiento. Por lo que un ejemplo practico seria:                    
+
+  	```bash
+  	chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/Git-GitHub-Course (main)
+  	$ ls -a
+  	./  ../  .git/  index.html  README.md
+  	$
+  	```
+
 - **`cd`:**  
 El comando `cd` (change directory) se utiliza para **movernos entre carpetas** desde la terminal. Por defecto, todos los comandos que ejecutamos en la terminal afectan a la **carpeta en la que nos encontramos actualmente** y, según el caso, a todas las subcarpetas que esta contenga. Por ejemplo, si estamos ubicados en una carpeta llamada `proyecto`, que a su vez contiene dos subcarpetas llamadas `proyecto_1` y `proyecto_2`, cualquier acción que ejecutemos tendrá efecto en `proyecto`.  Ahora bien, si lo que queremos es **acceder a una subcarpeta específica** para trabajar directamente en ella, usamos el comando `cd`. Basta con escribir `cd` seguido del nombre de la carpeta a la que deseamos entrar. Una vez ejecutado, la terminal cambiará su ubicación a esa carpeta, quedando de la siguiente manera:  
 
