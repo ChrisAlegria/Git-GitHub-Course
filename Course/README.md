@@ -286,3 +286,12 @@ El comando `pwd` (**print working directory**) se utiliza para **mostrar la ruta
   $
   ```
 
+- **`mkdir`:**  
+El comando `mkdir` (**make directory**) se utiliza para **crear nuevas carpetas (directorios)** directamente desde la terminal de Git.  Aunque comúnmente hablamos de "carpetas", en los sistemas basados en Linux (como Git Bash) estas se conocen como **directorios**. Para crear uno, basta con escribir `mkdir` seguido del nombre que le queremos asignar. Por ejemplo, si queremos crear una carpeta llamada `proyecto_3`, podemos hacerlo de la siguiente manera:  
+
+  ```bash
+  chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/Git-GitHub-Course (main)
+  $ mkdir proyecto_3
+  $
+  ```
+
