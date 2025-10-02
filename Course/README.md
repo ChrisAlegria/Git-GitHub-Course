@@ -299,31 +299,21 @@ Desde la terminal podemos **abrir directamente nuestro editor de código** en el
   ```
 
 # 〰️ Flujo de Git  
-Git trabaja con un **flujo definido** en el cual nuestros archivos van **pasando por diferentes estados** hasta finalmente llegar al repositorio remoto (estado final).  
-
-En total, podemos identificar **4 estados principales** que conforman el flujo de trabajo de Git:  
-
----
+Git trabaja con un **flujo definido** en el cual nuestros archivos van **pasando por diferentes estados** hasta finalmente llegar al repositorio remoto (estado final). Por lo que en total, podemos identificar **4 estados principales** que conforman el flujo de trabajo de Git:  
 
 1. **Local (sin marcar):**  
    El primer paso dentro del flujo de Git sucede cuando tenemos nuestros archivos **locales** en una carpeta de proyecto. Para iniciar este proceso, ejecutamos el comando **`git init`**, con lo cual damos de alta nuestro proyecto en Git. A partir de este momento, Git reconoce que ese directorio será gestionado bajo su sistema de control de versiones, aunque **aún no hace nada con los archivos**. En este estado, simplemente hemos **inicializado el repositorio**, pero los archivos siguen siendo locales sin ningún seguimiento activo.  
 
----
-
 2. **Stage (marcados):**  
    El segundo paso es el estado **Stage** (o “staging area”). Aquí usamos el comando **`git add .`**, lo que le indica a Git que tome nuestros archivos y los **marque** para que comiencen a ser rastreados. En este punto, Git crea una **copia temporal de los archivos** y empieza a observarlos. Eso significa que si los modificamos o eliminamos, Git detectará esos cambios. Es importante destacar que en esta etapa Git **no guarda todavía un historial permanente**, simplemente mantiene una **versión sincronizada temporal** de los archivos listos para ser confirmados. Si hacemos modificaciones y volvemos a ejecutar **`git add .`**, estas copias se actualizarán con los últimos cambios.  
-
----
 
 3. **Commit (fotografiados):**  
    Este paso es uno de los más importantes y muchas veces se confunde con Stage. La diferencia es que el **commit crea una versión oficial en el historial del repositorio**. Cuando ejecutamos **`git commit -m "mensaje"`**, Git toma los archivos que estaban en Stage (agregados con `git add .`) y los **almacena en el historial como un punto de guardado permanente**, con un mensaje que describe los cambios realizados. A diferencia de Stage, donde solo hay archivos preparados, en el commit ya tenemos una **fotografía exacta del proyecto en ese momento**, registrada de forma cronológica en el historial de versiones.  
 
----
-
 4. **Remote (en el servidor):**  
    Finalmente, llegamos al estado **Remote**, que representa el último paso del flujo de Git. Aquí tomamos las confirmaciones locales (commits) junto con su historial de cambios y las **subimos a un repositorio remoto**, como **GitHub, GitLab o Bitbucket**. Para ello utilizamos el comando **`git push`**, el cual envía toda la información al servidor remoto. Cabe destacar que para que esto funcione correctamente debemos haber **configurado previamente las credenciales** y conectado nuestro repositorio local al remoto.  
 
----
+# ☄️ Git: add, status, comit
 
    
 
