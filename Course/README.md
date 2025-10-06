@@ -315,5 +315,29 @@ Git trabaja con un **flujo definido** en el cual nuestros archivos van **pasando
 
 # ☄️ Git: add, status, comit
 
+- **`git status`:**  
+   El comando **`git status`** es una herramienta fundamental en Git que nos permite **consultar el estado actual de los archivos dentro del repositorio**. Con este comando podemos saber exactamente **qué archivos han sido modificados, cuáles están sin seguimiento (untracked), cuáles están en Stage y cuáles están listos para ser confirmados (commiteados)**. Por ejemplo, cuando ejecutamos `git status`, Git analiza el directorio de trabajo y nos muestra información sobre los cambios realizados desde la última confirmación (`commit`).  
+
+   Si algún archivo aparece como **“untracked”**, significa que **no está siendo rastreado por Git**, es decir, **Git aún no lo conoce**. Esto sucede con los archivos nuevos que acabamos de crear pero que **aún no hemos agregado con `git add`**.  
+
+   Por otro lado, si vemos el mensaje **“Changes not staged for commit”**, Git nos está indicando que hay archivos que **ya estaban siendo rastreados**, pero que **han sido modificados y todavía no se han agregado nuevamente al área de Stage**. Esto significa que Git detectó cambios en esos archivos, pero **no los incluirá en el próximo commit hasta que usemos `git add` nuevamente**. Este comando también puede mostrarnos si estamos en una rama específica (por ejemplo, `main`), si nuestro repositorio local está sincronizado con el remoto (`Your branch is up to date with 'origin/main'`), y sugerir acciones como restaurar archivos o agregarlos antes de hacer un commit. Por lo que un ejemplo de cómo se visualiza el uso del comando `git status` seria el siguiente:
+
+   ```bash
+   chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/Git-GitHub-Course (main)
+   $ git status
+   On branch main
+   Your branch is up to date with 'origin/main'.
+   
+   Changes not staged for commit:
+    (use "git add <file>..." to update what will be committed)
+    (use "git restore <file>..." to discard changes in working directory)
+          modified:   Course/README.md
+
+   Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+          Practices/
+
+   no changes added to commit (use "git add" and/or "git commit -a")
+   ```
    
 
