@@ -315,12 +315,23 @@ Git trabaja con un **flujo definido** en el cual nuestros archivos van **pasando
 
 # ☄️ Git: add, status, comit
 
-- **`git status`:**  
-   El comando **`git status`** es una herramienta fundamental en Git que nos permite **consultar el estado actual de los archivos dentro del repositorio**. Con este comando podemos saber exactamente **qué archivos han sido modificados, cuáles están sin seguimiento (untracked), cuáles están en Stage y cuáles están listos para ser confirmados (commiteados)**. Por ejemplo, cuando ejecutamos `git status`, Git analiza el directorio de trabajo y nos muestra información sobre los cambios realizados desde la última confirmación (`commit`).  
+## ➕ git add  
+  El comando **`git add`** se utiliza para **mover archivos de estado local a Stage**, de modo que Git comience a darles seguimiento. También sirve para **actualizar versiones de archivos que ya están en Stage** si han sido modificados o eliminados. Este comando cumple una función crucial, ya que **si no pasamos archivos de Local a Stage, estos nunca podrán ser registrados en un commit** (es decir, en una versión o copia del historial). Además, si los archivos ya están en Stage y realizamos cambios, **estos cambios no se registrarán en el próximo commit** a menos que volvamos a ejecutar `git add` para actualizar el Stage.  
 
-   Si algún archivo aparece como **“untracked”**, significa que **no está siendo rastreado por Git**, es decir, **Git aún no lo conoce**. Esto sucede con los archivos nuevos que acabamos de crear pero que **aún no hemos agregado con `git add`**.  
+  Algunas formas de usarlo:  
+  - `git add <nombreArchivo>`: agrega un archivo específico al Stage.  
+  - `git add <nombreCarpeta>/`: agrega todos los archivos dentro de esa carpeta al Stage.  
+  - `git add .`: agrega **todos los archivos y carpetas del proyecto** al Stage, incluyendo los nuevos y los modificados.
 
-   Por otro lado, si vemos el mensaje **“Changes not staged for commit”**, Git nos está indicando que hay archivos que **ya estaban siendo rastreados**, pero que **han sido modificados y todavía no se han agregado nuevamente al área de Stage**. Esto significa que Git detectó cambios en esos archivos, pero **no los incluirá en el próximo commit hasta que usemos `git add` nuevamente**. Este comando también puede mostrarnos si estamos en una rama específica (por ejemplo, `main`), si nuestro repositorio local está sincronizado con el remoto (`Your branch is up to date with 'origin/main'`), y sugerir acciones como restaurar archivos o agregarlos antes de hacer un commit. Por lo que un ejemplo de cómo se visualiza el uso del comando `git status` seria el siguiente:
+Un ejemplo deñ uso de **`git add`** en la terminal es el siguiente:
+
+```bash
+chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/Git-GitHub-Course (main)
+$ git add decription.txt
+```
+
+## 📊 git status  
+   El comando **`git status`** es una herramienta fundamental en Git que nos permite **consultar el estado actual de los archivos dentro del repositorio**. Con este comando podemos saber exactamente **qué archivos han sido modificados, cuáles están sin seguimiento (untracked), cuáles están en Stage y cuáles están listos para ser confirmados (commiteados)**. Por ejemplo, cuando ejecutamos `git status`, Git analiza el directorio de trabajo y nos muestra información sobre los cambios realizados desde la última confirmación (`commit`). Por lo que un ejemplo de cómo se visualiza el uso del comando `git status` seria el siguiente:
 
    ```bash
    chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/Git-GitHub-Course (main)
