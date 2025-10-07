@@ -339,5 +339,47 @@ Git trabaja con un **flujo definido** en el cual nuestros archivos van **pasando
 
    no changes added to commit (use "git add" and/or "git commit -a")
    ```
-   
 
+Ahora bien, pueden existir diferentes situaciones y funciones dentro del flujo de Git que pueden resultar confusas al principio, especialmente al manejar nuestros archivos. Aquí es donde **`git status`** se convierte en una herramienta clave, ya que nos permite **ubicar fácilmente el estado de nuestros archivos y entender qué acciones podemos tomar**. Recordemos que los **4 estados del flujo de Git** son: **local (sin seguimiento)**, **stage (marcados)**, **commit (fotografiados)** y **remote (en el servidor)**.  
+
+### Archivos en estado Local (sin seguimiento)  
+Cuando nuestros archivos están en el estado **local**, Git aún no les está dando seguimiento. En este caso, **`git status` nos mostrará una recomendación para usar `git add .`**, indicando que debemos agregarlos al Stage para comenzar a rastrearlos.  Es importante destacar que si hacemos un commit antes de agregar los archivos, **Git no los incluirá**, ya que aún no están marcados.  Ejemplo de cómo se mostraría un archivo local sin seguimiento:  
+
+```bash
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Practices/
+   ```
+
+### Archivos en estado Stage (marcados)  
+Una vez que marcamos nuestros archivos con `git add`, pasan al estado **Stage**, donde Git los observa para incluirlos en el próximo commit. Al ejecutar **`git status`** en este caso, la consola nos indicará que **hay cambios listos para ser confirmados**. Además, Git nos muestra sugerencias útiles, como **usar `git restore --staged` para desmarcar archivos y quitarles el estado Steg, regresandolos a estado local, esto sin alterar su contenido**. Ejemplo de cómo se muestra en la consola:  
+
+ ```bash
+   Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   "practices/\342\230\204\357\270\217 Git add, status, comit/file.txt"
+   ```
+
+### Acciones posibles en Stage antes de Commit  
+Con los archivos ya en Stage, existen dos posibilidades:  
+
+1. **Realizar un commit**: Esto crea una “fotografía” de los archivos actuales, registrando los cambios en el historial de Git.  
+
+2. **Modificar o eliminar archivos antes del commit**:  
+   Si realizamos cambios en los archivos ya marcados, **`git status`** nos mostrará cuáles archivos han sido modificados o eliminados, y nos dará sugerencias de las posibles acciones que podemos realizar:  
+     - **Agregar nuevamente los archivos modificados** con `git add .`: Git nos dara esta sugerencia en caso de querer incluir los cambios en el próximo commit. Esto es importante porque si hacemos un commit sin agregar los archivos modificados, Git registrará y creara el comit en base a la versión **anterior** de los archivos, dejando fuera los cambios recientes de los archivos.  
+     - **Eliminar archivos** del proyecto usando `git rm`:, Git nos sugerira esta otra accion en la cual podemos eliminar archivos tanto del Stage como del disco, reflejando correctamente la intención de borrarlo del proyecto, por lo que si es un archivo que estaba ya en alguna version del historial y realizamos un commit con el archivo eliminado en la ultima version eset dejara de aparecer (si estoy mal modificas aqui chat y pones que no se elimna o nose).  
+     - **Quitar archivos del Stage** sin eliminarlos del proyecto usando `git restore --staged`,: Esta otra sugerencia se refiere a mantener nuestros archivos dentro del proyecto manteniéndolos en el directorio pero sin seguimiento temporal en Stage hatsa que volvamos a darlos de alta, por lo que si se realiza un commit estos no se registraran.  
+     - **Restaurar archivos a la versión previamente agregada o del último commit** usando `git restore <file>`:  Etsa otra sugerencia nos habla hacerca de que podemos restuarar nuestros archivos a una version previa antes de la modifcacion, esta puede tomar 2 referencias, ya que si la ultima accion de guardado por asi decirlo fue un commit o el git add . actualizando el stage o agregando los archivos estos regresaran a dicha vertsion, ya sea modificaciones de codigo o eliminacion, donde si se elimina este se restaurara y se modifica este igualmente regresara al contenido que tenia la version.
+
+Ejemplo de cómo se muestran los cambios de archivos marcados con modificaciones o eliminados sin commit:  
+
+   ```bash
+   Changes not staged for commit:
+     (use "git add/rm <file>..." to update what will be committed)
+     (use "git restore <file>..." to discard changes in working directory)
+           deleted:    "practices/\342\230\204\357\270\217 Git add, status, comit/file1.txt"
+           modified:   "practices/\342\230\204\357\270\217 Git add, status, comit/file2.txt"
+   ```
+   
+   
