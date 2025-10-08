@@ -332,6 +332,37 @@ chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/Git-GitHub-Course (main)
 $ git add decription.txt
 ```
 
+## 🔀 git commit  
+El comando **`git commit`** se utiliza para **realizar un registro o “fotografía” del código** dentro del historial de versiones de Git. Este comando **toma los archivos que están confirmados en el área de Stage** (agregados mediante `git add`) y crea una nueva versión del proyecto.  Si existen archivos en Stage que fueron modificados después del último `git add`, pero **no se volvieron a agregar**, Git los **ignorará** al momento de realizar el commit, tomando como referencia **la versión anterior** que fue registrada con el último `git add`.  En otras palabras, **un commit guarda el estado actual del proyecto**, tomando en cuenta únicamente los archivos **agregados, modificados o eliminados** desde el último commit, **siempre y cuando estén en Stage**.  
+
+Estos commits son **locales**, es decir, se almacenan únicamente en el repositorio de tu máquina. Sin embargo, posteriormente pueden **subirse a un repositorio remoto**, como **GitHub**, lo que permite sincronizar los cambios y compartir el trabajo con otros desarrolladores.  
+
+Una ventaja importante de los commits es que **actúan como puntos de control o versiones de respaldo** del proyecto. Gracias a ellos, podemos:  
+- **Volver a versiones anteriores** del código en caso de errores.  
+- **Comparar diferencias** entre versiones para analizar cambios.  
+- **Visualizar modificaciones o eliminaciones específicas**.  
+
+Comúnmente, el comando **`git commit`** se acompaña del parámetro **`-m`**, el cual significa **message (mensaje)**. Esto se debe a que **todo commit debe tener un mensaje descriptivo** que permita identificar fácilmente los cambios realizados en esa versión. Cabe destacar que **el formato y estilo del mensaje del commit pueden variar** dependiendo de **las normas de la empresa, el equipo de desarrollo o las preferencias personales** del programador. Algunas organizaciones establecen convenciones estrictas (como usar prefijos tipo `feat:`, `fix:`, `refactor:` o `docs:`), mientras que otras permiten mensajes más libres siempre que sean claros y coherentes. Pero por lo general, se escribe una descripción **breve y clara** del propósito del commit, como por ejemplo:  
+- `"Se corrigió el bug en la función de login"`  
+- `"Se agregó el archivo README.md"`  
+- `"Se optimizó el código de validación de formularios"`  
+
+
+Cuando se ejecuta un commit, Git mostrará en la consola un **resumen informativo**, donde se incluye:  
+- La **rama actual** en la que se hizo el commit.  
+- El **identificador único (hash)** del commit creado.  
+- El **número de archivos afectados**.  
+- La **cantidad de inserciones, eliminaciones o modificaciones de líneas**.  
+
+Este mensaje de confirmación indica que **el commit se ha realizado correctamente**, y nos brinda una visión rápida de los cambios registrados. Por lo que un ejemplo de un commit exitoso junto con su mensaje de confirmacion es el siguiente:
+
+```bash
+chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/Git-GitHub-Course/Course (main)
+$ git commit -m "Update: Git Commit Description"
+[main 797cfda] Update: Git Commit Description
+ 1 file changed, 2 insertions(+)
+```
+
 ## 📊 git status  
    El comando **`git status`** es una herramienta fundamental en Git que nos permite **consultar el estado actual de los archivos dentro del repositorio**. Con este comando podemos saber exactamente **qué archivos han sido modificados, cuáles están sin seguimiento (untracked), cuáles están en Stage y cuáles están listos para ser confirmados (commiteados)**. Por ejemplo, cuando ejecutamos `git status`, Git analiza el directorio de trabajo y nos muestra información sobre los cambios realizados desde la última confirmación (`commit`). Por lo que un ejemplo de cómo se visualiza el uso del comando `git status` seria el siguiente:
 
