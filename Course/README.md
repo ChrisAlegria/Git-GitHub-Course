@@ -315,8 +315,6 @@ Git trabaja con un **flujo definido** en el cual nuestros archivos van **pasando
 
 # ☄️ Git: add, status, comit
 
-
-
 ## ➕ git add  
   El comando **`git add`** se utiliza para **mover archivos de estado local a Stage**, de modo que Git comience a darles seguimiento. También sirve para **actualizar versiones de archivos que ya están en Stage** si han sido modificados o eliminados. Este comando cumple una función crucial, ya que **si no pasamos archivos de Local a Stage, estos nunca podrán ser registrados en un commit** (es decir, en una versión o copia del historial). Además, si los archivos ya están en Stage y realizamos cambios, **estos cambios no se registrarán en el próximo commit** a menos que volvamos a ejecutar `git add` para actualizar el Stage.  
 
@@ -434,5 +432,10 @@ Con los archivos ya en **Stage**, existen dos posibilidades:
                 deleted:    "practices/\342\230\204\357\270\217 Git add, status, comit/file1.txt"
                 modified:   "practices/\342\230\204\357\270\217 Git add, status, comit/file2.txt"
      ```
-   
-   
+
+     Ahora bien, cuando realizamos un **commit** y se suben todos nuestros archivos a dicho commit —es decir, cuando absolutamente **todo lo que está en Stage ha sido actualizado y registrado correctamente**—, al ejecutar nuevamente el comando **`git status`**, Git nos mostrará un mensaje indicando que **no hay nada nuevo para confirmar (commit)**. Esto significa que **no existen cambios pendientes**, ya que todos los archivos fueron incluidos en el último commit y el estado del repositorio está completamente sincronizado. Por lo tanto, la consola mostrará un mensaje similar al siguiente:
+
+     
+
+        
+        
