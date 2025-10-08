@@ -435,7 +435,16 @@ Con los archivos ya en **Stage**, existen dos posibilidades:
 
      Ahora bien, cuando realizamos un **commit** y se suben todos nuestros archivos a dicho commit —es decir, cuando absolutamente **todo lo que está en Stage ha sido actualizado y registrado correctamente**—, al ejecutar nuevamente el comando **`git status`**, Git nos mostrará un mensaje indicando que **no hay nada nuevo para confirmar (commit)**. Esto significa que **no existen cambios pendientes**, ya que todos los archivos fueron incluidos en el último commit y el estado del repositorio está completamente sincronizado. Por lo tanto, la consola mostrará un mensaje similar al siguiente:
 
-     
+     ```bash
+     chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/Git-GitHub-Course/Course (main)
+     $ git status
+     On branch main
+     Your branch is ahead of 'origin/main' by 1 commit.
+       (use "git push" to publish your local commits)
+
+     nothing to commit, working tree clean
+     ```
+
 
         
         
