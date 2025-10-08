@@ -445,6 +445,4 @@ Con los archivos ya en **Stage**, existen dos posibilidades:
      nothing to commit, working tree clean
      ```
 
-
-        
-        
+# 😑 Git Ignore
