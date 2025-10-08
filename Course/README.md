@@ -315,6 +315,8 @@ Git trabaja con un **flujo definido** en el cual nuestros archivos van **pasando
 
 # ☄️ Git: add, status, comit
 
+
+
 ## ➕ git add  
   El comando **`git add`** se utiliza para **mover archivos de estado local a Stage**, de modo que Git comience a darles seguimiento. También sirve para **actualizar versiones de archivos que ya están en Stage** si han sido modificados o eliminados. Este comando cumple una función crucial, ya que **si no pasamos archivos de Local a Stage, estos nunca podrán ser registrados en un commit** (es decir, en una versión o copia del historial). Además, si los archivos ya están en Stage y realizamos cambios, **estos cambios no se registrarán en el próximo commit** a menos que volvamos a ejecutar `git add` para actualizar el Stage.  
 
