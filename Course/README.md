@@ -494,4 +494,4 @@ Podemos ignorar todos los archivos de un mismo formato usando la extension y con
 *.gif
 ```
 
-
+# Git Diff
