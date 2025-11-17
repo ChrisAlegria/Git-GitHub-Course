@@ -446,4 +446,52 @@ Con los archivos ya en **Stage**, existen dos posibilidades:
      ```
 
 # 😑 Git Ignore
+Git maneja una herramienta muy útil que consiste en un archivo llamado **`.gitignore`**, el cual es un archivo de configuración donde podremos introducir **todos los nombres de archivos y carpetas que queremos que Git ignore completamente**.  
+Esto significa que Git **jamás les tomará foto**, **no les dará seguimiento**, **no aparecerán en `git status` como archivos para agregar**, y además **nunca serán subidos a un repositorio remoto**. Es importante aclarar que, aunque Git ignore estos archivos, **el archivo `.gitignore` sí debe agregarse al Stage y subirse al repositorio remoto**, ya que es precisamente este archivo el que instruye a Git (y a otros colaboradores) qué elementos deben omitirse dentro del proyecto.
+
+## 🤔 ¿Por qué se usa este archivo?
+El archivo `.gitignore` se usa principalmente para **evitar subir archivos que no deben formar parte del repositorio**, ya sea por motivos de seguridad, porque se generan automáticamente o porque simplemente no tienen relevancia en el control de versiones. Entre sus usos más comunes encontramos:
+
+- **Evitar subir credenciales sensibles o privadas**, como archivos `.env`, tokens, API keys, configuraciones locales, etc.  
+- **Evitar subir carpetas generadas automáticamente**, como `node_modules/` o dependencias de otros entornos.  
+- **Ignorar archivos o carpetas que se regeneran al ejecutar el proyecto**, como logs, cachés, configuraciones temporales o archivos de compilación.  
+- **Mantener limpio el historial del proyecto**, evitando que versiones innecesarias saturen el repositorio o compliquen la colaboración con otras personas.
+
+El archivo `.gitignore` evita pérdidas de seguridad, reduce el tamaño del repositorio y mejora considerablemente la organización del proyecto.
+
+
+## 📄 Cómo crear el archivo `.gitignore`
+Para crear o generar un archivo `.gitignore`, simplemente debemos **crear un archivo nuevo con ese mismo nombre** dentro del proyecto. Este archivo debe colocarse **en la carpeta raíz del repositorio**, para que su configuración afecte a todos los archivos y carpetas del proyecto. En caso de tener múltiples módulos o proyectos dentro de un mismo repositorio, se pueden crear varios `.gitignore`, pero el general siempre debe estar en la raíz.
+
+## 📁 Declaración de archivos y carpetas a ignorar
+El funcionamiento del archivo `.gitignore` es muy sencillo:  
+**solamente escribimos la ruta del archivo o la carpeta que deseamos ignorar**, y Git dejará de rastrear esa información automáticamente. Esto es muy útil cuando deseamos no subir cierto contenido por temas de seguridad, privacidad, organización o simplemente porque no es necesario para el repositorio.
+
+### Ejemplo para ignorar un archivo dentro de una carpeta
+Al especificar un archivo en `gitignore` Git ignorará ese archivo específico.
+```bash
+styles/style.css
+```
+
+
+### Ejemplo para ignorar una carpeta completa
+Al especificar una carpeta dentro de `gitignote`, **toda la carpeta y todo su contenido** será ignorado por Git sin necesidad de escribir cada archivo manualmente.
+
+```bash
+styles
+```
+
+## 🎴 Uso de comodines
+Dentro del archivo `.gitignore` podemos utilizar **comodines especiales**, que nos ayudan a ignorar tipos de archivos completos o patrones de nombres sin necesidad de escribirlos uno por uno. Esto es especialmente útil cuando manejamos muchos archivos multimedia o grandes cantidades de archivos generados automáticamente.
+
+### Ejemplo de comodín por extensión
+Podemos ignorar todos los archivos de un mismo formato usando la extension y con esto Git ignorará absolutamente **todos los archivos** que terminen con esa extensión, sin importar en qué carpeta estén ubicados.
+
+```bash
+*.jpg
+*.mp4
+*.mp3
+*.gif
+```
+
 
