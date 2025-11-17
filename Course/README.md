@@ -445,6 +445,53 @@ Con los archivos ya en **Stage**, existen dos posibilidades:
      nothing to commit, working tree clean
      ```
 
+## ✂️ Forma corta de Git Status
+Adicionalmente, cabe mencionar que existe una forma **simplificada y resumida** de visualizar el estado del repositorio usando el comando:
+
+```bash
+git status -s
+```
+
+Esta variante del comando **muestra un resumen compacto** de los archivos modificados, agregados, eliminados o en diferentes estados dentro del repositorio.  
+En lugar de mostrar un desglose largo y detallado como el `git status` normal, esta versión utiliza **símbolos específicos** para indicar rápidamente el tipo de modificación o el estado del archivo. Por ejemplo, si vemos algo como:
+
+```bash
+ M Course/README.md
+```
+
+La letra **`M`** indica que ese archivo fue **modificado**, por lo que está pendiente de ser agregado al Stage o de ser confirmado en un commit. Este formato es ideal cuando se quiere tener una vista rápida del estado del repositorio sin saturarse con información detallada. Ejemplo real dentro de Git Bash:
+
+```bash
+chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/git-github-course (main)
+$ git status -s
+ M Course/README.md
+```
+
+## 📌 Símbolos comunes en `git status -s`
+Git utiliza diferentes símbolos para indicar de forma rápida lo que ocurrió con cada archivo.  
+Los más comunes son:
+
+- **M** → *Modified (modificado)*  
+  Indica que el archivo ha sido modificado en el área de trabajo (working directory).
+
+- **M** a la izquierda y espacio a la derecha → *Modificado en Stage*  
+  Significa que el archivo fue agregado al Stage con `git add`, pero volvió a modificarse después.
+
+- **A** → *Added (agregado)*  
+  Indica que es un archivo nuevo que ya ha sido agregado al Stage.
+
+- **??** → *Untracked (sin seguimiento)*  
+  Significa que el archivo no está siendo rastreado por Git; está en estado local.
+
+- **D** → *Deleted (eliminado)*  
+  Indica que el archivo fue eliminado del proyecto.
+
+- **R** → *Renamed (renombrado)*  
+  Indica que un archivo fue cambiado de nombre.
+
+- **UU** → *Unmerged (conflicto)*  
+  Aparece cuando existe un conflicto durante un merge.
+
 # 😑 Git Ignore
 Git maneja una herramienta muy útil que consiste en un archivo llamado **`.gitignore`**, el cual es un archivo de configuración donde podremos introducir **todos los nombres de archivos y carpetas que queremos que Git ignore completamente**.  
 Esto significa que Git **jamás les tomará foto**, **no les dará seguimiento**, **no aparecerán en `git status` como archivos para agregar**, y además **nunca serán subidos a un repositorio remoto**. Es importante aclarar que, aunque Git ignore estos archivos, **el archivo `.gitignore` sí debe agregarse al Stage y subirse al repositorio remoto**, ya que es precisamente este archivo el que instruye a Git (y a otros colaboradores) qué elementos deben omitirse dentro del proyecto.
@@ -495,3 +542,4 @@ Podemos ignorar todos los archivos de un mismo formato usando la extension y con
 ```
 
 # Git Diff
+Existe un comando dentro de git que nos permite ver la comparacion de un archivo de nuestra version actual a un archivo o version anterior de este mismo 
