@@ -616,3 +616,6 @@ Otra línea agregada. El signo **`+`** indica que esta línea **no existía en l
 
 ### `\ No newline at end of file`
 Esto indica que **el archivo no terminaba con una línea vacía**. No es un error, solo una advertencia visual común de Git.
+
+> **👀 Nota importante:**  
+> Git *solo muestra las líneas que fueron modificadas*, agregadas o eliminadas; **no muestra todo el contenido del archivo**, únicamente el fragmento involucrado en el cambio.
