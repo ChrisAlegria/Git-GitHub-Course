@@ -662,4 +662,35 @@ Date:   Mon Nov 17 16:25:44 2025 -0600
 ```
 
 ## ✂️ Forma corta de Git Log
-Existe una forma corta de Git log la cual nos permite
+Existe una **forma corta de `git log`** que nos permite visualizar nuestro historial de commits **mostrando únicamente un commit por línea**, lo cual resulta muy útil cuando queremos una vista rápida, compacta y limpia del historial. Sin embargo, este método tiene una **limitante importante**, ya que solo nos mostrará **el código (hash) del commit** —que es el identificador único con el que Git registra dicho commit— y **el mensaje o descripción** que se colocó al momento de crearlo. Es decir, no muestra autor, fecha, ni detalles adicionales. Para utilizar esta forma corta, simplemente debemos agregar el parámetro `--oneline`, quedando el comando completo como:
+
+```bash
+git log --oneline
+```
+
+Una vez ejecutado, Git nos devolverá un listado de commits en una sola línea por cada uno, mostrando únicamente:
+- El **código** del commit (hash abreviado).  
+- El **nombre o descripción** del commit.  
+
+Una vez ejecutado, el resultado será un **historial compacto** que facilita mucho la navegación entre versiones, mostrando unicamente los 2 puntos/aspectos mencionados anteriormente. Mostrandose en cosola algo parecido a lo que se muestra a continuacion.
+
+```bash
+chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/git-github-course (main)
+$ git log --oneline
+0a10183 (HEAD -> main, origin/main) Update: Git Log Section With Some Note Fixes
+2446537 Update: README to clarify Git line modification
+46b6bc2 Update: Note At Git Diff Section
+3ad93e7 Add: Gti Diff Section
+8069095 Add: Short Status Command Section
+6fba1d3 Add: Git Diff Section
+7297de9 Add: Git Ignore Section
+904301e Delete: Spaces In General README
+f6e672f Update: Spaces
+91d38c0 Delete: Spaces
+46aa6a8 Delete: Spaces At Principal README
+101e193 Delete: Space
+afb5f36 Update: Space
+dc85cee Add: Git Ignore Section
+8cf93a9 Update: Git Commit Information
+:
+```
