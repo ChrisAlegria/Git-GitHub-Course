@@ -625,21 +625,42 @@ Git, además de manejar comandos para visualizar el estado de los archivos que e
 
 Cuando se utiliza el comando **`git log`**, Git despliega una estructura muy clara y consistente. Cada commit se muestra con **cuatro elementos fundamentales**, los cuales nos permiten identificar completamente la información del registro. Los cuales se presentan a continuación.
 
-1. **Clave del commit (Commit Hash):** Git muestra una clave o código largo compuesto por caracteres alfanuméricos. Este código es el identificador único del commit, conocido como **hash del commit**, y permite acceder exactamente a ese punto del historial. Además, Git también puede mostrar la **rama** en la que se realizó ese commit.
+1. **Clave del commit (Commit Hash):**  
+   Git muestra una clave o código largo compuesto por caracteres alfanuméricos. Este código es el identificador único del commit, conocido como **hash del commit**, y permite acceder exactamente a ese punto del historial. Además, Git también puede mostrar la **rama** en la que se realizó ese commit.
 
-2. **Autor del commit**  
-En esta sección aparecen los datos del usuario que realizó el commit, incluyendo:  
+2. **Autor del commit:**  
+   En esta sección aparecen los datos del usuario que realizó el commit, incluyendo:  
    - **Nombre del autor** configurado en Git.  
    - **Correo electrónico** asociado a la cuenta.  
 
    Esto es fundamental en proyectos colaborativos para saber quién realizó cada cambio.
 
-3. **Fecha y hora del commit:** Git muestra la fecha exacta en la que se creó ese commit, incluyendo la hora con su zona horaria. Esto permite rastrear cuándo fue realizado cada cambio en el proyecto.
+3. **Fecha y hora del commit:**  
+   Git muestra la fecha exacta en la que se creó ese commit, incluyendo la hora con su zona horaria. Esto permite rastrear cuándo fue realizado cada cambio en el proyecto.
 
-4. **Mensaje del commit:** Finalmente, aparece la descripción o mensaje que el usuario ingresó con el parámetro `-m` al realizar el commit. Este mensaje debe describir de forma breve y clara el propósito del cambio registrado.
+4. **Mensaje del commit:**  
+   Finalmente, aparece la descripción o mensaje que el usuario ingresó con el parámetro `-m` al realizar el commit. Este mensaje debe describir de forma breve y clara el propósito del cambio registrado.
+
+## 🪖 Orden de los commits en `git log`
+El historial que muestra `git log` **siempre aparece ordenado del commit más reciente al más antiguo**.  
+Es decir:
+
+- El primer commit que aparece arriba del todo es **el último que se realizó**.
+- El segundo es el **penúltimo**.
+- Y así sucesivamente, descendiendo en orden cronológico hacia los commits más antiguos.
+
+Gracias a este orden, es muy sencillo identificar de inmediato cuál fue la última versión registrada del proyecto.
+
+## 🎯 ¿Qué significa HEAD en `git log`?
+Cuando Git muestra un commit acompañado de la palabra **HEAD**, esto indica que:
+
+- Ese commit es **el último commit realizado en la rama actual**.
+- Es el commit **en el que te encuentras parado actualmente**, es decir, el que tu repositorio está usando como referencia en ese momento.
+
+HEAD siempre apunta al commit activo, lo que permite saber con exactitud en qué versión del código estamos trabajando en ese instante.
 
 ## 🖥️ Ejemplo del uso de `git log`
-Una vez que se ejecuta el comando `git log` dentro de la consola, se podra visualizar el historial de commits realizados junto con su informacion correspondiente por cada commit.
+Una vez que se ejecuta el comando `git log` dentro de la consola, se podrá visualizar el historial de commits realizados junto con su información correspondiente por cada commit.
 
 ```bash
 chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/git-github-course (main)
