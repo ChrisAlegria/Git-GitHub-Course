@@ -541,5 +541,78 @@ Podemos ignorar todos los archivos de un mismo formato usando la extension y con
 *.gif
 ```
 
-# Git Diff
-Existe un comando dentro de git que nos permite ver la comparacion de un archivo de nuestra version actual a un archivo o version anterior de este mismo 
+# 🆚 Git Diff
+Dentro de Git existe un comando muy útil llamado **`git diff`**, el cual nos permite **comparar el contenido de un archivo entre dos estados distintos**.  
+Este comando se usa principalmente para visualizar los **cambios que existen en el Working Directory (local)** respecto a la versión de ese mismo archivo que ya fue agregada al **Stage** mediante `git add`. Esto significa que si un archivo ya está en Stage (es decir, Git ya tiene una “copia” lista para el siguiente commit) y luego realizamos nuevas modificaciones sin agregarlo nuevamente, `git diff` mostrará **exactamente qué cambió** entre la versión del Stage y la versión actual del archivo.
+
+Con `git diff` podemos ver:
+- Líneas **eliminadas**
+- Líneas **modificadas**
+- Líneas **agregadas**
+- Diferencias específicas entre versiones antes de realizar un commit
+
+Esto es extremadamente útil para revisar cambios antes de confirmarlos en un commit. Por lo que este es Ejemplo de uso real:
+
+```bash
+chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/git-github-course/course (main)
+$ git diff
+diff --git a/Course/texto.txt b/Course/texto.txt
+index 37d8675..9f529c2 100644
+--- a/Course/texto.txt
++++ b/Course/texto.txt
+@@ -1 +1,3 @@
+-Hola mundo
+\ No newline at end of file
++Hola mundo
++
++¿como estan?
+\ No newline at end of file
+```
+
+## 📝 Explicación detallada línea por línea del resultado
+Como se puede ver el comando `git diff` muestra diferentes lineas de codigo, por lo cual se explicara a continuacion cada una de ellas.
+
+### `diff --git a/Course/texto.txt b/Course/texto.txt`
+Esta línea indica **los dos archivos que se están comparando**, los cuales Git los compara como si fueran dos archivos distintos llamados *a* y *b*.
+- `a/Course/texto.txt` → versión registrada en Stage (antes del cambio reciente)  
+- `b/Course/texto.txt` → versión actual del archivo en el directorio de trabajo  
+
+### `index 37d8675..9f529c2 100644`
+Esta línea de codigo muestra:
+
+- Los **hashes internos** de Git que representan cada versión del archivo.
+- El número final (`100644`) indica permisos del archivo (normal en archivos de texto en Git).
+
+Por lo que no hay que preocuparse o tomar mucha atencion a esto, ya que es metadata de Git.
+
+### `--- a/Course/texto.txt`
+El archivo con el prefijo `---` representa la **versión anterior** (la que está en Stage).  
+Git lo marca con un signo “–” (menos) porque es la versión “vieja”.
+
+### `+++ b/Course/texto.txt`
+El archivo con el prefijo `+++` representa la **versión nueva** (la que está en local).  
+Git lo marca con “+” porque contiene los nuevos cambios.
+
+### `@@ -1 +1,3 @@`
+Esta línea forma parte del encabezado del bloque de cambios que Git muestra cuando usamos `git diff`.
+Su propósito es indicar **desde qué línea comienzan las modificaciones** y **cuántas líneas están involucradas**, tanto en la versión anterior como en la versión actual.
+
+- **`-1`** → Indica que en la **versión anterior** el cambio inicia en la **línea 1**.
+- **`+1,3`** → Indica que en la **nueva versión** el cambio también comienza en la **línea 1**, pero además especifica que ahora **hay 3 líneas en total** dentro del bloque modificado.
+
+En pocas palabras, Git usa estos números para saber **dónde empezaron los cambios** y **cuántas líneas se agregaron o forman parte del nuevo contenido**.
+
+### `-Hola mundo`
+El signo **`-`** al inicio indica que esta línea **fue eliminada** o reemplazada respecto a la versión previa. Sin embargo, en este caso verás que en la versión nueva también aparece, por lo que en realidad Git lo muestra así porque detectó cambios en el bloque del archivo.
+
+### `+Hola mundo`
+El signo **`+`** indica que esta línea **forma parte de la versión nueva**. Aunque el texto es el mismo, aparece como nueva porque forma parte de un bloque de líneas que sufrió cambios.
+
+### `+`
+Línea vacía agregada. Git la marca como nueva porque **esa línea antes no existía**.
+
+### `+¿como estan?`
+Otra línea agregada. El signo **`+`** indica que esta línea **no existía en la versión previa (Stage)** y fue añadida en el Working Directory.
+
+### `\ No newline at end of file`
+Esto indica que **el archivo no terminaba con una línea vacía**. No es un error, solo una advertencia visual común de Git.
