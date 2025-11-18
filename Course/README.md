@@ -6,14 +6,14 @@ Los desarrolladores pueden **confirmar su trabajo localmente** y, a continuació
 
 Git es un **software que maneja versiones** y lo hace de manera **local**, directamente en el dispositivo donde estés trabajando. Esto permite **guardar capturas de distintas versiones** del código que desarrolles, facilitando el seguimiento de cambios y la colaboración con otros desarrolladores.  
 
-💡 *En resumen, Git te permite mantener un historial completo de tu proyecto, trabajar de manera organizada y segura, y colaborar eficientemente con otros desarrolladores.*  
+>💡 *En resumen, Git te permite mantener un historial completo de tu proyecto, trabajar de manera organizada y segura, y colaborar eficientemente con otros desarrolladores.*  
 
 ## 📌 ¿Qué es GitHub?
 **GitHub** es una **plataforma en línea** que utiliza el sistema de control de versiones **Git** para **alojar repositorios de código fuente** y facilitar la **colaboración en proyectos de desarrollo de software**. Fue fundada en **2008** por **Tom Preston-Werner, Chris Wanstrath, P. J. Hyett y Scott Chacon**, y desde entonces se ha convertido en una de las **herramientas más importantes y populares para desarrolladores en todo el mundo**.  
 
 En GitHub, los desarrolladores pueden **subir sus repositorios locales a la nube**, compartirlos con otros, trabajar de manera conjunta en el mismo proyecto, **gestionar ramas, issues, pull requests**, y mantener un historial completo de cambios accesible desde cualquier lugar.  
 
-💡 *En resumen, GitHub es la plataforma que lleva la potencia de Git a la nube, permitiendo a equipos de cualquier tamaño colaborar en tiempo real, mantener un flujo de trabajo más ordenado y centralizar sus proyectos de software en un solo lugar.*
+>💡 *En resumen, GitHub es la plataforma que lleva la potencia de Git a la nube, permitiendo a equipos de cualquier tamaño colaborar en tiempo real, mantener un flujo de trabajo más ordenado y centralizar sus proyectos de software en un solo lugar.*
 
 ---
 
@@ -47,7 +47,7 @@ Con **Git**, en cambio, podemos trabajar y crear nuestros **commits** de manera 
 
 Además, Git cuenta con **repositorios remotos**, que son **lugares en la nube donde se almacena el código y todas sus versiones**, siendo **GitHub** la plataforma más utilizada. Todos los integrantes del equipo pueden trabajar localmente, subir sus cambios cuando estén listos y **consultar todas las versiones existentes**.  
 
-💡 *Trabajar de manera local con Git permite que nunca se elimine accidentalmente el trabajo en el repositorio y que solo se suban los cambios que realmente están correctos y aprobados.*
+>💡 *Trabajar de manera local con Git permite que nunca se elimine accidentalmente el trabajo en el repositorio y que solo se suban los cambios que realmente están correctos y aprobados.*
 
 ---
 
@@ -58,7 +58,7 @@ Cuando varios integrantes de un equipo van subiendo cambios a un mismo proyecto,
 
 Sin un sistema de control de versiones, esto no sería posible, ya que no contaríamos con un historial que indique **qué cambios se hicieron, cuándo y por quién**. En Git, cada commit funciona como una **copia de seguridad del estado del código en ese momento**, lo que nos brinda la capacidad de **avanzar o retroceder en el tiempo** según sea necesario.  
 
-💡 *Git nos da la capacidad de rastrear errores, corregirlos de manera eficiente y mantener la estabilidad de la aplicación sin perder el historial de nuestro trabajo.*
+>💡 *Git nos da la capacidad de rastrear errores, corregirlos de manera eficiente y mantener la estabilidad de la aplicación sin perder el historial de nuestro trabajo.*
 
 ---
 
@@ -71,7 +71,7 @@ Desde esta consola podemos realizar diversas acciones como **crear commits**, **
 
 Por otro lado, algunos entornos de desarrollo como **Visual Studio Code** incluyen herramientas gráficas que facilitan la gestión de Git. Esto significa que podemos **confirmar cambios, crear ramas o sincronizar nuestro repositorio** sin necesidad de escribir comandos en la terminal, lo cual resulta muy práctico para quienes prefieren una interfaz más visual.  
 
-💡 *La terminal de Git es la herramienta más completa para interactuar con el sistema, y abrirla en la carpeta correcta nos permite ejecutar acciones directamente sobre su contenido, mientras que los entornos gráficos ofrecen una alternativa más sencilla y accesible.*
+>💡 *La terminal de Git es la herramienta más completa para interactuar con el sistema, y abrirla en la carpeta correcta nos permite ejecutar acciones directamente sobre su contenido, mientras que los entornos gráficos ofrecen una alternativa más sencilla y accesible.*
 
 ---
 
@@ -122,7 +122,7 @@ Por lo que el parámetro `core` controla aspectos esenciales del funcionamiento 
   git config core.editor "code"
   ```
 
-  ⚠️ *OJO: Configurar un editor externo en Git no significa que vayamos a ejecutar los comandos desde ese editor (como git commit o git push). Lo que hace es que, cuando Git necesite que escribamos algo que la consola no maneja cómodamente (por ejemplo, un mensaje de commit largo, una descripción detallada en un merge o la edición de configuraciones internas), en lugar de usar la terminal, se abrirá automáticamente el editor que hayamos configurado.*
+  >⚠️ *OJO: Configurar un editor externo en Git no significa que vayamos a ejecutar los comandos desde ese editor (como git commit o git push). Lo que hace es que, cuando Git necesite que escribamos algo que la consola no maneja cómodamente (por ejemplo, un mensaje de commit largo, una descripción detallada en un merge o la edición de configuraciones internas), en lugar de usar la terminal, se abrirá automáticamente el editor que hayamos configurado.*
 
 
   - **`--wait`:**  
@@ -159,7 +159,7 @@ Por lo que el parámetro `core` controla aspectos esenciales del funcionamiento 
   	git config core.autocrlf input
   	``` 
 
-  💡 *core.autocrlf nos ayuda a que los saltos de línea se mantengan consistentes entre diferentes sistemas operativos, evitando errores y asegurando que el código sea legible y funcional sin importar desde dónde se edite.*
+  >💡 *core.autocrlf nos ayuda a que los saltos de línea se mantengan consistentes entre diferentes sistemas operativos, evitando errores y asegurando que el código sea legible y funcional sin importar desde dónde se edite.*
 
 ## ✏️ Edit
 El parámetro **`--edit`**, abreviado como **`-e`**, nos permite **editar archivos de configuración** en Git. Dentro de `git config`, este parámetro nos facilita **verificar nuestras configuraciones actuales**, ya sea a nivel de proyecto o de manera global, y **modificarlas si así lo deseamos**.  
@@ -192,7 +192,7 @@ Al ejecutar cualquiera de estos comandos nuestro editor de código abrirá un ar
 ## 📑 Archivo de configuración  
 Cuando creamos un proyecto para trabajar con un sistema de gestión de versiones como **Git**, se genera un archivo llamado **`.gitconfig`**, el cual contiene toda la configuración que el proyecto está utilizando. Este archivo puede reflejar tanto configuraciones específicas del proyecto como configuraciones globales aplicadas a todo el sistema, y estará siempre presente en los repositorios que gestionemos con Git. En él se almacenan parámetros importantes como el **editor de texto predeterminado**, el **nombre de usuario**, el **correo electrónico** asociado y muchos otros ajustes que determinan el comportamiento de Git.  
 
-💡 *En resumen, el archivo `.gitconfig` es el lugar donde Git centraliza todas las configuraciones necesarias para que podamos trabajar de manera ordenada y personalizada en cada proyecto.*
+>💡 *En resumen, el archivo `.gitconfig` es el lugar donde Git centraliza todas las configuraciones necesarias para que podamos trabajar de manera ordenada y personalizada en cada proyecto.*
 
 # 📟 Comandos Básicos de la Terminal  
 Existen diversos **comandos básicos** dentro de la **consola/terminal de Git**, los cuales están basados en los **comandos de Linux**. Estos comandos se pueden utilizar en diferentes momentos y resultan muy útiles para tareas como **ayuda, edición, modificación y gestión general** dentro del entorno de trabajo. La gran ventaja es que la mayoría de ellos son **universales**, es decir, pueden usarse en cualquier proyecto y en prácticamente cualquier situación, ya sea para **aplicar configuraciones globales, solicitar ayuda, realizar ediciones o limpiar la consola**. Son, en definitiva, **comandos clave** que todo desarrollador debe dominar para desenvolverse de manera más eficiente al trabajar con Git.  Por lo que algunos de los más comunes son: 
@@ -520,7 +520,6 @@ Al especificar un archivo en `gitignore` Git ignorará ese archivo específico.
 styles/style.css
 ```
 
-
 ### Ejemplo para ignorar una carpeta completa
 Al especificar una carpeta dentro de `gitignote`, **toda la carpeta y todo su contenido** será ignorado por Git sin necesidad de escribir cada archivo manualmente.
 
@@ -617,5 +616,50 @@ Otra línea agregada. El signo **`+`** indica que esta línea **no existía en l
 ### `\ No newline at end of file`
 Esto indica que **el archivo no terminaba con una línea vacía**. No es un error, solo una advertencia visual común de Git.
 
-> **👀 Nota importante:**  
-> Git *solo muestra las líneas que fueron modificadas*, agregadas o eliminadas; **no muestra todo el contenido del archivo**, únicamente el fragmento involucrado en el cambio junto con con unas pocas líneas de contexto alrededor de los cambios.
+> ⚠️ *OJO: Git solo muestra las líneas que fueron modificadas*, agregadas o eliminadas; **no muestra todo el contenido del archivo**, únicamente el fragmento involucrado en el cambio junto con con unas pocas líneas de contexto alrededor de los cambios.*
+
+# </> Git Log  
+Git, además de manejar comandos para visualizar el estado de los archivos que están siendo rastreados, modificados o en Stage, también cuenta con un comando muy útil que nos permite ver **un listado completo del historial de commits** realizados en nuestro proyecto. Ese comando es **`git log`**, el cual muestra información detallada sobre cada commit registrado en el repositorio. Sin embargo, para muchos usuarios al principio puede resultar **verboso, largo o incluso confuso**, ya que muestra bastante información y además, una vez ejecutado, es necesario usar un comando especial para **salir de la vista del historial y regresar a la consola Bash** con normalidad.
+
+## 👁️‍🗨️ Información que muestra `git log`
+
+Cuando se utiliza el comando **`git log`**, Git despliega una estructura muy clara y consistente. Cada commit se muestra con **cuatro elementos fundamentales**, los cuales nos permiten identificar completamente la información del registro. Los cuales se presentan a continuación.
+
+1. **Clave del commit (Commit Hash):** Git muestra una clave o código largo compuesto por caracteres alfanuméricos. Este código es el identificador único del commit, conocido como **hash del commit**, y permite acceder exactamente a ese punto del historial. Además, Git también puede mostrar la **rama** en la que se realizó ese commit.
+
+2. **Autor del commit**  
+En esta sección aparecen los datos del usuario que realizó el commit, incluyendo:  
+   - **Nombre del autor** configurado en Git.  
+   - **Correo electrónico** asociado a la cuenta.  
+
+   Esto es fundamental en proyectos colaborativos para saber quién realizó cada cambio.
+
+3. **Fecha y hora del commit:** Git muestra la fecha exacta en la que se creó ese commit, incluyendo la hora con su zona horaria. Esto permite rastrear cuándo fue realizado cada cambio en el proyecto.
+
+4. **Mensaje del commit:** Finalmente, aparece la descripción o mensaje que el usuario ingresó con el parámetro `-m` al realizar el commit. Este mensaje debe describir de forma breve y clara el propósito del cambio registrado.
+
+## 🖥️ Ejemplo del uso de `git log`
+Una vez que se ejecuta el comando `git log` dentro de la consola, se podra visualizar el historial de commits realizados junto con su informacion correspondiente por cada commit.
+
+```bash
+chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/git-github-course (main)
+$ git log
+commit 8069095a752b0e6f59f10a44d3ba35fdfa6368dc (HEAD -> main, origin/main)
+Author: Chris Alegria <christian.alegriar@gmail.com>
+Date:   Mon Nov 17 17:02:34 2025 -0600
+
+    Add: Short Status Command Section
+
+commit 6fba1d3e05fd494973913478156efaa1e6582971
+Author: Chris Alegria <christian.alegriar@gmail.com>
+Date:   Mon Nov 17 16:39:15 2025 -0600
+
+    Add: Git Diff Section
+
+commit 7297de953740b4c6fe1fcea37fd623fd07e3113f
+Author: Chris Alegria <christian.alegriar@gmail.com>
+Date:   Mon Nov 17 16:25:44 2025 -0600
+```
+
+## ✂️ Forma corta de Git Log
+Existe una forma corta de Git log la cual nos permite
