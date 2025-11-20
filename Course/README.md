@@ -743,3 +743,21 @@ La rama principal suele llamarse **master** o **main**, y su finalidad típica e
 
 En resumen:  
 **Una branch es una línea alterna de trabajo que parte de un punto específico del proyecto y permite desarrollar cambios sin afectar directamente a la versión principal.**
+
+# 📝 Git Branch & Checkout
+Como se mencionó anteriormente, Git cuenta con un **sistema de ramas**, las cuales representan **versiones alternas del código** que pueden desarrollarse de forma independiente y, en algún momento, **integrarse con la versión principal** del proyecto. Gracias a las ramas, es posible trabajar en nuevas características, funciones o pruebas sin afectar el código principal. Por lo general, esa rama principal se llama **master** o **main**, y a partir de ella podemos crear otras ramas donde trabajaremos de manera aislada. Por lo que para gestionar este sistema de ramas, Git utiliza principalmente dos comandos fundamentales: **`git branch`** y **`git checkout`**.
+
+## 🌳 Git Branch
+El comando **`git branch`** es muy sencillo de entender, pero extremadamente importante. Su función es **mostrar el listado de ramas del proyecto** y señalar cuál es la rama en la que estamos trabajando actualmente. Cuando ejecutamos este comando, Git nos devolverá todas las ramas existentes en el repositorio, y marcará con un **asterisco** la rama activa en ese momento.  
+
+Es importante mencionar que el resultado dependerá del proyecto que estemos trabajando:  
+- En un **proyecto 1**, podrías estar trabajando sobre la rama `master`.  
+- En un **proyecto 2**, podrías estar trabajando en una rama llamada `desarrolloPruebas`, `test-1`, `v2`, etc.
+
+Cada proyecto puede tener sus propias ramas creadas según las necesidades del equipo o del usuario. A continuación, se presenta un ejemplo de cómo se visualiza este comando una vez ejecutado.
+
+```bash
+chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/git-github-course (main)
+$ git branch
+* main
+```
