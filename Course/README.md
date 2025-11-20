@@ -783,6 +783,85 @@ El comando **`git checkout`** tiene **dos funciones principales**: **crear una n
    Your branch is up to date with 'origin/main'.
    ```
 
-## Git Merge
+## 🔀 Git Merge
 
-> ⚠️ *OJO: Algunos editores de codigo como Visual Studio Code, en la parte inferior mostrara el nombre de la branch(rama) en la cual se esta trabajando en el proyecto actual.*
+El comando **`git merge`** es uno de los más importantes dentro del flujo de trabajo en Git, ya que permite **unir los cambios de una rama secundaria con la rama principal**. En términos simples, este comando combina dos líneas de desarrollo diferentes para integrarlas en una sola versión final del proyecto. Para llevar a cabo un *merge*, se siguen los siguientes pasos:
+
+1. **Colocarse en la rama principal:**  
+   Para poder fusionar los cambios, primero **se debe asegurar** que se está ubicado en la rama que **recibirá** las modificaciones. Generalmente esa rama es **`main`** (o `master`, dependiendo del proyecto). Para posicionarse en esa rama, se utiliza el comando: `git checkout main`. Este comando coloca el proyecto en la rama principal, dejándola lista para recibir los cambios provenientes de otra rama.
+
+2. **Ejecutar el merge:**  
+   Una vez que se está en la rama principal, se procede a realizar la integración de cambios mediante: `git merge nombreRama`. Este comando toma todos los cambios registrados en **nombreRama** y los fusiona con los de la rama principal. Después de ejecutarlo, Git mostrará en consola una serie de líneas que indican cuáles archivos cambiaron, cuántas inserciones o eliminaciones se realizaron y cómo se integró el contenido entre ambas ramas. Estas líneas funcionan como un reporte detallado del proceso de fusión.
+
+## 📝 Explicación detallada línea por línea del resultado
+
+Ahora bien al ejecutar dicho comando nos arrojara un par de lineas de cosdigo las cuales se explicancion es:
+### `Updating 6c2f8f7..442442f`
+Esta línea indica que Git está **actualizando la rama actual** usando los cambios provenientes de otra rama.  
+Los valores `6c2f8f7` y `442442f` representan los **hashes internos** de Git:
+
+- El primer hash corresponde al **estado anterior** de la rama principal.  
+- El segundo hash representa el **nuevo estado** después de aplicar los cambios.
+
+En otras palabras, Git está diciendo: *“Tu rama pasó de esta versión… a esta otra nueva versión después del merge”*.
+
+### `Fast-forward`
+Esta línea indica que Git realizó un **merge de tipo *fast-forward***.  
+Esto significa que:
+
+- No hubo conflictos.  
+- La rama principal **avanzó directamente** hasta alcanzar el mismo punto que la rama secundaria.  
+- No fue necesario crear un commit adicional de merge.  
+
+Es el tipo de combinación más simple y limpia.
+
+### `Course/texto.txt    | 0`
+Esta línea muestra la **ubicación del archivo** que fue parte de la combinación.  
+El número `0` indica que **no hubo cambios** dentro del archivo (ni líneas agregadas ni eliminadas).  
+Git lo lista porque formó parte del proceso, pero **su contenido permaneció igual** al fusionarse con la rama principal.
+
+### `Practices/texto.txt | 3 +--`
+Esta línea indica otro archivo involucrado en la fusión.
+
+- El número `3` indica que Git detectó **3 líneas modificadas** en este archivo.  
+- El símbolo `+` indica que **se agregó una línea**.  
+- Los símbolos `--` indican que **se eliminaron dos líneas**.
+
+En resumen: en este archivo **entró 1 línea nueva y salieron 2 líneas anteriores**.
+
+
+### `2 files changed, 1 insertion(+)`
+Esta línea expresa un pequeño resumen de lo que se modificó durante la fusión:
+
+- Se modificaron **2 archivos**.  
+- Hubo **1 inserción** total (una sola línea agregada entre todos los archivos).  
+
+Git también incluye aquí las eliminaciones, pero solo indica explícitamente el número de inserciones.
+
+### `delete mode 100644 Course/texto.txt`
+Esta línea indica que Git **eliminó el archivo** `Course/texto.txt` durante la fusión.  
+La palabra *mode* acompañada de `100644` representa los **permisos del archivo** antes de ser borrado (una configuración típica de archivos de texto).
+
+En resumen: Git detectó que, según la otra rama, este archivo **ya no debía existir**, así que lo eliminó en la rama principal como parte del merge.
+
+### `create mode 100644 Practices/texto.txt`
+Esta línea indica que Git **creó un archivo nuevo** como resultado de la fusión: `Practices/texto.txt`.  
+El modo `100644` vuelve a ser la metadata de permisos estándar.
+
+Esto significa que la rama secundaria contenía un archivo que **no existía** en la rama principal y que, al fusionarse, Git lo añadió. Por lo que el código que arroja la terminal completo es el siguiente
+
+```bash
+chris@LAPTOP-0DNMOIV6 MINGW64 /d/Trabajos/Cursos/git-github-course (main)
+$ git merge ramaDePracticas
+Updating 6c2f8f7..442442f
+Fast-forward
+ Course/texto.txt    | 0
+ Practices/texto.txt | 1 +
+ 2 files changed, 1 insertion(+)
+ delete mode 100644 Course/texto.txt
+ create mode 100644 Practices/texto.txt
+```
+
+> 👁️ *Dato:* Al ejecutar **`git log`** después de realizar un **`git merge`**, puede aparecer una línea similar a: `commit 442442f988a0e37d1f6d65913a7ad74f1232bb4e (HEAD -> main, origin/ramaDePracticas, ramaDePracticas)`. Esto indica que, tras la fusión, **tanto la rama principal (`main`) como la rama secundaria (`ramaDePracticas`) apuntan exactamente al mismo commit**. En otras palabras, ambas ramas quedaron **sin diferencias** y comparten el mismo punto en la historia, por lo que Git marca el commit como **HEAD** para ambas. Esto ocurre porque al fusionarse, sus contenidos quedaron completamente alineados.
+
+> ⚠️ *OJO:* Algunos editores como **Visual Studio Code**, en la parte inferior de la ventana, muestran **el nombre de la rama en la que se está trabajando actualmente**. Esto es útil para verificar rápidamente si se está en `main`, en una rama de desarrollo o en cualquier otra rama del proyecto.
