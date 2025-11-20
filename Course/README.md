@@ -865,3 +865,5 @@ Fast-forward
 > 👁️ *Dato:* Al ejecutar **`git log`** después de realizar un **`git merge`**, puede aparecer una línea similar a: `commit 442442f988a0e37d1f6d65913a7ad74f1232bb4e (HEAD -> main, origin/ramaDePracticas, ramaDePracticas)`. Esto indica que, tras la fusión, **tanto la rama principal (`main`) como la rama secundaria (`ramaDePracticas`) apuntan exactamente al mismo commit**. En otras palabras, ambas ramas quedaron **sin diferencias** y comparten el mismo punto en la historia, por lo que Git marca el commit como **HEAD** para ambas. Esto ocurre porque al fusionarse, sus contenidos quedaron completamente alineados.
 
 > ⚠️ *OJO:* Algunos editores como **Visual Studio Code**, en la parte inferior de la ventana, muestran **el nombre de la rama en la que se está trabajando actualmente**. Esto es útil para verificar rápidamente si se está en `main`, en una rama de desarrollo o en cualquier otra rama del proyecto.
+
+# ⌨️ Git en Visual Studio Code
