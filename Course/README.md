@@ -870,7 +870,7 @@ Fast-forward
 Git no solo se puede manejar desde la consola: editores como **Visual Studio Code** (VS Code) incluyen herramientas integradas que permiten realizar tareas como crear commits, manejar ramas, visualizar cambios e incluso subir commits al repositorio remoto. Estas funciones brindan **alternativas más visuales y accesibles**, facilitando el flujo de trabajo del desarrollador. A continuación se explica cómo funciona el soporte de Git dentro de Visual Studio Code y cómo interpretar cada una de sus ayudas visuales.
 
 ## 🎨 Indicadores visuales en el explorador de archivos
-Cuando un proyecto ya fue inicializado con Git (`git init`), VS Code comienza a mostrar **colores e íconos especiales** en el explorador lateral de archivos. Por ejemplo, si se crea un archivo nuevo que **todavía no está en stage**, VS Code lo marcará con un color **amarillo**, indicando que es un archivo **nuevo**, sin seguimiento y sin haber sido agregado aún.
+Cuando un proyecto ya fue inicializado con Git (`git init`), VS Code comienza a mostrar **colores e íconos especiales** en el explorador lateral de archivos. Por ejemplo, si se crea un archivo nuevo que **todavía no está en stage**, VS Code lo marcará con un color **verde**, indicando que es un archivo **nuevo**, sin seguimiento y sin haber sido agregado aún.
 <br>
 <br>
 <p align=center>
@@ -918,6 +918,7 @@ Estos indicadores ayudan a entender qué tipo de modificación ocurrió en cada 
 ## 👁️ Visualización dentro del explorador de archivos
 Los mismos indicadores también aparecen en el explorador de archivos general, junto a los nombres de los archivos del proyecto:
 
+- Archivos **nuevos, sin estar en stage** se muestran marcados en **verde**.  
 - Archivos **modificados** se muestran marcados en **amarillo**.  
 - Archivos que ya están **stageados** se muestran en **azul**.  
 
@@ -1005,3 +1006,96 @@ Al confirmar el commit, la lista de cambios en el panel de Source Control **se v
   <img src="assets/images/visual_studio_code/img_11.png" width="200"></img>&nbsp;
   <img src="assets/images/visual_studio_code/img_12.png" width="200"></img>
 </p>
+
+## 🌳 Crear ramas
+En Visual Studio Code, en la **esquina inferior izquierda**, aparece un **icono de ramas** acompañado del **nombre de la rama actual** en la que estamos trabajando. &nbsp;<img src="assets/images/visual_studio_code/img_1.png" width="40"></img>&nbsp;. Si hacemos clic sobre este elemento, se abrirá en la parte superior una **barra de búsqueda** con varias opciones relacionadas con la gestión de ramas. Las tres primeras opciones que aparecen son:
+
+- **(＋) Create new branch** → permite **crear una nueva rama desde la rama actual**.  
+- **Create new branch from…** → permite **crear una nueva rama a partir de otra rama diferente** (por ejemplo, crear una rama desde *main* aunque actualmente estés en *dev*).  
+- **Checkout detached** → permite posicionarte en un commit específico sin estar en una rama (modo “detached HEAD”), útil para inspecciones, aunque no se recomienda trabajar así a largo plazo.
+
+<br>
+<p align="center">
+	  <img src="assets/images/visual_studio_code/img_13.png" width="250"></img>
+</p>
+
+### Listado de ramas locales
+Debajo de estas tres opciones aparece una **línea divisoria**, y enseguida se muestra el **listado de todas las ramas locales** del proyecto.  
+Cada rama se muestra con información útil como:
+
+- Nombre de la rama.
+- Fecha de creación o última actualización.
+- Usuario que la creó.
+- Identificador del commit más reciente  .
+- Descripción del último commit realizado dentro de la rama.
+
+Este apartado permite seleccionar cualquiera de estas ramas para **cambiar a ella** y continuar trabajando dentro de ese contexto.
+
+<br>
+<p align="center">
+	  <img src="assets/images/visual_studio_code/img_14.png" width="200"></img>
+</p>
+
+### Listado de ramas remotas
+Más abajo, separado también por una línea, se encuentra el listado de las **ramas remotas**, es decir, las que existen en el repositorio en la nube (GitHub, GitLab, etc.). Estas ramas muestran la misma información que las locales:
+
+- Nombre de la rama  
+- Fecha de creación o actualización  
+- Usuario que la creó  
+- Código o hash del commit más reciente  
+- Mensaje del último commit
+
+Desde aquí también se puede seleccionar cualquier rama remota para **cambiarse a ella** y trabajar sobre esa versión del código.
+
+<br>
+<p align="center">
+	  <img src="assets/images/visual_studio_code/img_15.png" width="200"></img>
+</p>
+
+## 🖇️ Merge y muchas otras opciones
+Dentro del panel de **Source Control**, en la parte superior del campo donde se escribe el mensaje del commit, se encuentra un botón con **tres puntos (…)**.  
+Al presionarlo, Visual Studio Code despliega un **menú completo de opciones**, el cual incluye categorías como:
+
+- **View & Sort**  
+- **Pull**  
+- **Push**  
+- **Clone**  
+- **Checkout to…**  
+- **Fetch**  
+- **Commit**  
+- **Changes**  
+- **Pull & Push**  
+- **Branch**  
+- **Remote**  
+- **Stash**  
+- **Tags**  
+- **Show Git Output**
+
+Este menú concentra prácticamente todas las acciones importantes que pueden realizarse con Git desde la interfaz gráfica de VS Code, permitiendo gestionar el repositorio sin necesidad de usar comandos directamente.
+
+<br>
+<p align="center">
+	  <img src="assets/images/visual_studio_code/img_16.png" width="200"></img>
+</p>
+
+### Realizar un merge desde Visual Studio Code
+Para realizar un merge desde este menú, el procedimiento es similar al del uso de Git por consola: primero se debe **estar ubicado en la rama que recibirá los cambios**, normalmente `main` o `master`. Ya estando en esa rama:
+
+1. Se presionan los **tres puntos (…)**.  
+2. Se selecciona la opción **Branch**.  
+3. Dentro de esa categoría aparece la opción **Merge**.
+
+<br>
+<p align="center">
+	  <img src="assets/images/visual_studio_code/img_17.png" width="200"></img>
+</p>
+
+Al seleccionar “Merge”, Visual Studio Code abrirá la **barra de búsqueda superior**, mostrando un listado de **todas las ramas disponibles**, tanto **locales** como **remotas**, desde las cuales puede realizarse el merge hacia la rama actual.
+
+<br>
+<p align="center">
+	  <img src="assets/images/visual_studio_code/img_18.png" width="200"></img>
+</p>
+
+### Más opciones disponibles
+Además del merge, este menú permite realizar prácticamente cualquier acción común de Git: cambiar de rama, hacer un fetch, trabajar con stashes, manejar tags, revisar historial, entre muchas otras opciones esenciales del flujo de trabajo. Los **tres puntitos** funcionan como una **puerta de acceso a casi todas las herramientas avanzadas de Git** dentro de VS Code, lo que facilita administrar el proyecto sin necesidad de comandos manuales.
