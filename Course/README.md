@@ -928,6 +928,30 @@ Esto permite reconocer el estado de cada archivo sin necesidad de entrar al pane
 	<img src="assets/images/visual_studio_code/img_5.png" width="200"></img>
 </p>
 
+## 🧩 Git add, restore & rm en Visual Studio Code
+Dentro del panel de **Source Control**, donde aparece el listado de archivos **modificados** o **en Stage**, Visual Studio Code incluye una serie de botones a la derecha del nombre de cada archivo. Estos botones permiten realizar acciones rápidas sin necesidad de usar la terminal. A continuación se explica cada uno:
+
+1. Botón con ícono de **hoja (🗎):** Este botón **abre el archivo** directamente en el editor. Es útil cuando se desea revisar su contenido antes de decidir si agregarlo a Stage o descartar los cambios.
+
+2. Botón con ícono de **flecha curva (↩):** Este botón permite **descartar los cambios realizados** en el archivo. Al presionarlo, el contenido del archivo regresará a su **última versión en Stage**, es decir, volverá al estado previo a la modificación. Es equivalente a usar el comando:
+
+   - `git restore <archivo>`  
+
+3. Botón con ícono de **más (+):** Este botón sirve para **agregar el archivo a Stage**, marcándolo para que sea incluido en el próximo commit. Al presionarlo, el archivo pasa del apartado **Changes** al apartado **Staged Changes**.
+
+
+### 🔽Caso especial para archivos en Stage
+Cuando un archivo **ya está en Stage**, el botón de “+” ya no aparece. En su lugar aparece un botón con icono de **menos (–)**.
+
+1. **Botón con menos (–):** Este botón sirve para **quitar el archivo del Stage**, regresándolo al apartado de **Changes**, sin borrar su contenido. Es equivalente a ejecutar:
+
+   - `git restore --staged <archivo>`
+
+<p align="center">
+	<img src="assets/images/visual_studio_code/img_6.png" width="200"></img>&nbsp;
+	<img src="assets/images/visual_studio_code/img_7.png" width="200"></img>
+</p>
+
 ## 📝 Vista de diferencias (*Diff*)
 Si se selecciona un archivo marcado con **M** (modificado) dentro del Source Control, VS Code abrirá automáticamente una vista dividida:
 
@@ -938,7 +962,7 @@ Esta herramienta es muy útil para revisar qué líneas fueron agregadas, cambia
 
 <br>
 <p align=center>
-	<img src="assets/images/visual_studio_code/img_6.png" width="350"></img>
+	<img src="assets/images/visual_studio_code/img_8.png" width="350"></img>
 </p>
 
 ## 🔄 Restaurar cambios desde el Diff
@@ -951,4 +975,6 @@ En la vista del *diff*, específicamente **en el panel derecho**, donde aparecen
 En pocas palabras: si una modificación no convence, basta con **dar clic en la flecha o los tres puntos** para regresar esa línea exactamente a como estaba antes del cambio.
 
 <br>
-<img src="assets/images/visual_studio_code/img_7.png" width="200" center></img>
+<p align="center">
+	<img src="assets/images/visual_studio_code/img_9.png" width="350" center></img>
+</p>
