@@ -1053,8 +1053,7 @@ Desde aquí también se puede seleccionar cualquier rama remota para **cambiarse
 </p>
 
 ## 🖇️ Merge y muchas otras opciones
-Dentro del panel de **Source Control**, en la parte superior del campo donde se escribe el mensaje del commit, se encuentra un botón con **tres puntos (…)**.  
-Al presionarlo, Visual Studio Code despliega un **menú completo de opciones**, el cual incluye categorías como:
+Dentro del panel de **Source Control**, en la parte superior del campo donde se escribe el mensaje del commit, se encuentra un botón con **tres puntos (…)**. Al presionarlo, Visual Studio Code despliega un **menú completo de opciones**, el cual incluye categorías como:
 
 - **View & Sort**  
 - **Pull**  
