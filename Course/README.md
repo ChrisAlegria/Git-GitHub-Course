@@ -947,6 +947,7 @@ Cuando un archivo **ya está en Stage**, el botón de “+” ya no aparece. En 
 
    - `git restore --staged <archivo>`
 
+<br>
 <p align="center">
 	<img src="assets/images/visual_studio_code/img_6.png" width="200"></img>&nbsp;
 	<img src="assets/images/visual_studio_code/img_7.png" width="200"></img>
@@ -977,4 +978,30 @@ En pocas palabras: si una modificación no convence, basta con **dar clic en la 
 <br>
 <p align="center">
 	<img src="assets/images/visual_studio_code/img_9.png" width="350" center></img>
+</p>
+
+## 🪛 Realización de commits
+Dentro del mismo apartado de **Source Control** se encuentra un campo para escribir el **mensaje del commit**. El placeholder suele mostrar algo como `Message (Ctrl+Enter to commit on ...)`. Junto a ese campo aparece un **botón largo azul claro con una palomita (✓)**: ese botón **confirma el commit** y guarda los cambios stageados con el mensaje escrito. A la derecha del botón principal hay una **flecha ▼** que despliega varias opciones de commit. Estas opciones permiten realizar tipos de commit específicos, por ejemplo:
+
+- **Commit**: confirma los cambios localmente.  
+- **Commit & Push**: confirma los cambios y los envía al remoto en un solo paso.  
+- **Commit & Sync**: hace el commit y sincroniza las diferencias entre el remoto y el local (pull + push según corresponda).
+
+Además, se puede usar el atajo **Ctrl+Enter** (o la combinación que muestre el editor) para confirmar rápidamente el commit desde el campo del mensaje.
+
+<br>
+<p align="center">
+  <img src="assets/images/visual_studio_code/img_10.png" width="200" center></img>
+</p>
+
+### ¿Qué pasa después de hacer un commit?
+Al confirmar el commit, la lista de cambios en el panel de Source Control **se vacía** (los archivos pasan de Staged/Changes a estar registrados en el historial). En el lugar del listado quedará un **botón azul** que ofrece acciones según el estado del repositorio remoto:
+
+- **Si no hay repositorio remoto conectado:** el botón mostrará **“Publish Branch”** (Publicar rama), permitiendo crear el repositorio remoto y subir la rama por primera vez.  
+- **Si ya está conectado a un remoto:** el mismo botón ofrecerá opciones para **sincronizar** (push/pull) y subir los commits al repositorio remoto.
+
+<br>
+<p align="center">
+  <img src="assets/images/visual_studio_code/img_11.png" width="200"></img>&nbsp;
+  <img src="assets/images/visual_studio_code/img_12.png" width="200"></img>
 </p>
