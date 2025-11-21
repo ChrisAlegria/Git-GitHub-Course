@@ -864,9 +864,32 @@ Fast-forward
 
 > 👁️ *Dato:* Al ejecutar **`git log`** después de realizar un **`git merge`**, puede aparecer una línea similar a: `commit 442442f988a0e37d1f6d65913a7ad74f1232bb4e (HEAD -> main, origin/ramaDePracticas, ramaDePracticas)`. Esto indica que, tras la fusión, **tanto la rama principal (`main`) como la rama secundaria (`ramaDePracticas`) apuntan exactamente al mismo commit**. En otras palabras, ambas ramas quedaron **sin diferencias** y comparten el mismo punto en la historia, por lo que Git marca el commit como **HEAD** para ambas. Esto ocurre porque al fusionarse, sus contenidos quedaron completamente alineados.
 
-> ⚠️ *OJO:* Algunos editores como **Visual Studio Code**, en la parte inferior de la ventana, muestran **el nombre de la rama en la que se está trabajando actualmente** &nbsp; <img src="assets/images/visual_studio_Code/img_1.png" width="40"></img> &nbsp;. Esto es útil para verificar rápidamente si se está en `main`, en una rama de desarrollo o en cualquier otra rama del proyecto.
+> ⚠️ *OJO:* Algunos editores como **Visual Studio Code**, en la parte inferior de la ventana, muestran **el nombre de la rama en la que se está trabajando actualmente** &nbsp; <img src="assets/images/visual_studio_code/img_1.png" width="40"></img> &nbsp;. Esto es útil para verificar rápidamente si se está en `main`, en una rama de desarrollo o en cualquier otra rama del proyecto.
 
 # ⌨️ Git en Visual Studio Code
 Todo lo que tenga que ver con la creacion de commits, manejo de ramas y la subida de los commits locales a remotos se pueden realizar no unicamdente mendaite codigo en la consola bash de git, si no que programas e incluso editores de codigo como visual studio code ya inclullen funciones y herramientas para facilitar la realizacion de estas actividades, lo cual estas herramientes y facilidades nos brindan alternativas para poder trabajar en estos aspectos e incluso facilitando a los desarrolladores el uso y el trabajo de el uso de este tipo de aspectos.
 
-En este caso veremos unicamente las ayudas que hay en visual studio code respecto a git, ya que personalmente es el editor de codigo principal que menejo, por lo que siempre que nosotros tengamos un proyecto en visual studio code, ya en estado init (indicandole a git que ese proyecto usara el sistema de gestion de versiones), en la seccion lateral izquierda donde se encuentra el explorar de archivos de nuestro proyecto, segun lo que nosotros hagamos este nos mostrara una ayuda u otra referente a los archivos, por ejemplo cuando creamos un archivo nuevo que no esta en modo stage, visual studio code colocara en su nombre un color verdoso indicando que dicho archivo es nuevo y que no esta en stage: &nbsp; <img src="assets/images/visual_studio_Code/img_2.png" width="40"></img> &nbsp;.
+En este caso veremos unicamente las ayudas que hay en visual studio code respecto a git, ya que personalmente es el editor de codigo principal que menejo, por lo que siempre que nosotros tengamos un proyecto en visual studio code, ya en estado init (indicandole a git que ese proyecto usara el sistema de gestion de versiones), en la seccion lateral izquierda donde se encuentra el explorar de archivos de nuestro proyecto, segun lo que nosotros hagamos este nos mostrara una ayuda u otra referente a los archivos, por ejemplo cuando creamos un archivo nuevo que no esta en modo stage, visual studio code colocara en su nombre un color amarillo indicando que dicho archivo es nuevo y que no esta en stage:
+<br>
+<br>
+<img src="assets/images/visual_studio_code/img_2.png" width="200" center></img> 
+
+Ahora bien existe un apartado especial dentro de visual studio code, en el cual se encuenta igualmente en la parte izquierda, junto al boton para abrir el panel de archivos, pero en este caso hablamos del campo del source control el cual nos permite abrir el sistema de manejo de versiones que maneja visual studio code de git, el cual abre la pestaña mostrada a continuacion: 
+<br>
+<br>
+<img src="assets/images/visual_studio_code/img_3.png" width="200" center></img>
+
+Una vez visualizada toda la seccion completa explicaremos parte por parte que conforma a esta, primeramente como se dijo anteriormente cuando creamos un archivo nuevo, modificamos alguno o incluso lo eliminamos se mostrtara un listado de dichos archivos en la parte inferior del boton azul, donde segun el tipo de cambio del archivo se abrira como una especie de seccion, pudiendo ser, staged changes, changes, donde staged changes son aquellos elementos que ya fueron agregados a stage mientras uqe los changes son unicamnete cambios que se realizaron pero que aun no estan en modo stage, lo cual puede implicar que son cambios de archivos diferentes o de los mismos archivos que estan en stage pero que hay cambios sin stagear. Por lo que ademas alado del nombre del archivo se podra mostrar un simbolo siendo "A" para archivos stage sin mas cambios y listo para comitear, "M" de que el archivo fue modificado, "U" para archivos que aun no estan en stage y hay otros mas, por lo que en visual studio code se visualizan de la siguiente manera: 
+<br>
+<br>
+<img src="assets/images/visual_studio_code/img_4.png" width="200" center></img>
+
+> 👁️ *Dato: el listado de simbolos de "A,M,U", tambien se mostraran en la seccion del explorador de archivos, donde se visualizan todos los archivos de nuestro proyecto, igualmente coloreandose de amarillo para aquellos archivos que fueron modificados y en azul los archivos que estan en stage listos para ser subidos a commit.
+<br>
+<br>
+<img src="assets/images/visual_studio_code/img_5.png" width="200" center></img>
+
+Ahora bien si nosotors cliqueamos un archivo con el simbolo M de modificado en el source control se nos abriran 2 pestañas en visual studio code, la primera a mano izquierda mostrando los cambios anteriores antes de ser modificado el archivo y en la parte derecha lo que contiene actualmente el archivo osea sus modificaciones.
+<br>
+<br>
+<img src="assets/images/visual_studio_code/img_6.png" width="200" center></img>
