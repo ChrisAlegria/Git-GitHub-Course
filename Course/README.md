@@ -1051,3 +1051,51 @@ Desde aquí también se puede seleccionar cualquier rama remota para **cambiarse
 <p align="center">
 	  <img src="assets/images/visual_studio_code/img_15.png" width="200"></img>
 </p>
+
+## 🖇️ Merge y muchas otras opciones
+Dentro del panel de **Source Control**, en la parte superior del campo donde se escribe el mensaje del commit, se encuentra un botón con **tres puntos (…)**.  
+Al presionarlo, Visual Studio Code despliega un **menú completo de opciones**, el cual incluye categorías como:
+
+- **View & Sort**  
+- **Pull**  
+- **Push**  
+- **Clone**  
+- **Checkout to…**  
+- **Fetch**  
+- **Commit**  
+- **Changes**  
+- **Pull & Push**  
+- **Branch**  
+- **Remote**  
+- **Stash**  
+- **Tags**  
+- **Show Git Output**
+
+Este menú concentra prácticamente todas las acciones importantes que pueden realizarse con Git desde la interfaz gráfica de VS Code, permitiendo gestionar el repositorio sin necesidad de usar comandos directamente.
+
+<br>
+<p align="center">
+	  <img src="assets/images/visual_studio_code/img_16.png" width="200"></img>
+</p>
+
+### Realizar un merge desde Visual Studio Code
+Para realizar un merge desde este menú, el procedimiento es similar al del uso de Git por consola: primero se debe **estar ubicado en la rama que recibirá los cambios**, normalmente `main` o `master`. Ya estando en esa rama:
+
+1. Se presionan los **tres puntos (…)**.  
+2. Se selecciona la opción **Branch**.  
+3. Dentro de esa categoría aparece la opción **Merge**.
+
+<br>
+<p align="center">
+	  <img src="assets/images/visual_studio_code/img_17.png" width="200"></img>
+</p>
+
+Al seleccionar “Merge”, Visual Studio Code abrirá la **barra de búsqueda superior**, mostrando un listado de **todas las ramas disponibles**, tanto **locales** como **remotas**, desde las cuales puede realizarse el merge hacia la rama actual.
+
+<br>
+<p align="center">
+	  <img src="assets/images/visual_studio_code/img_18.png" width="200"></img>
+</p>
+
+### Más opciones disponibles
+Además del merge, este menú permite realizar prácticamente cualquier acción común de Git: cambiar de rama, hacer un fetch, trabajar con stashes, manejar tags, revisar historial, entre muchas otras opciones esenciales del flujo de trabajo. Los **tres puntitos** funcionan como una **puerta de acceso a casi todas las herramientas avanzadas de Git** dentro de VS Code, lo que facilita administrar el proyecto sin necesidad de comandos manuales.
