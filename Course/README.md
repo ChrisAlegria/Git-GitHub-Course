@@ -867,29 +867,78 @@ Fast-forward
 > ⚠️ *OJO:* Algunos editores como **Visual Studio Code**, en la parte inferior de la ventana, muestran **el nombre de la rama en la que se está trabajando actualmente** &nbsp; <img src="assets/images/visual_studio_code/img_1.png" width="40"></img> &nbsp;. Esto es útil para verificar rápidamente si se está en `main`, en una rama de desarrollo o en cualquier otra rama del proyecto.
 
 # ⌨️ Git en Visual Studio Code
-Todo lo que tenga que ver con la creacion de commits, manejo de ramas y la subida de los commits locales a remotos se pueden realizar no unicamdente mendaite codigo en la consola bash de git, si no que programas e incluso editores de codigo como visual studio code ya inclullen funciones y herramientas para facilitar la realizacion de estas actividades, lo cual estas herramientes y facilidades nos brindan alternativas para poder trabajar en estos aspectos e incluso facilitando a los desarrolladores el uso y el trabajo de el uso de este tipo de aspectos.
+Git no solo se puede manejar desde la consola: editores como **Visual Studio Code** (VS Code) incluyen herramientas integradas que permiten realizar tareas como crear commits, manejar ramas, visualizar cambios e incluso subir commits al repositorio remoto. Estas funciones brindan **alternativas más visuales y accesibles**, facilitando el flujo de trabajo del desarrollador. A continuación se explica cómo funciona el soporte de Git dentro de Visual Studio Code y cómo interpretar cada una de sus ayudas visuales.
 
-En este caso veremos unicamente las ayudas que hay en visual studio code respecto a git, ya que personalmente es el editor de codigo principal que menejo, por lo que siempre que nosotros tengamos un proyecto en visual studio code, ya en estado init (indicandole a git que ese proyecto usara el sistema de gestion de versiones), en la seccion lateral izquierda donde se encuentra el explorar de archivos de nuestro proyecto, segun lo que nosotros hagamos este nos mostrara una ayuda u otra referente a los archivos, por ejemplo cuando creamos un archivo nuevo que no esta en modo stage, visual studio code colocara en su nombre un color amarillo indicando que dicho archivo es nuevo y que no esta en stage:
+## 🎨 Indicadores visuales en el explorador de archivos
+Cuando un proyecto ya fue inicializado con Git (`git init`), VS Code comienza a mostrar **colores e íconos especiales** en el explorador lateral de archivos. Por ejemplo, si se crea un archivo nuevo que **todavía no está en stage**, VS Code lo marcará con un color **amarillo**, indicando que es un archivo **nuevo**, sin seguimiento y sin haber sido agregado aún.
 <br>
 <br>
-<img src="assets/images/visual_studio_code/img_2.png" width="200" center></img> 
+<p align=center>
+	<img src="assets/images/visual_studio_code/img_2.png" width="200"></img>
+</p>
 
-Ahora bien existe un apartado especial dentro de visual studio code, en el cual se encuenta igualmente en la parte izquierda, junto al boton para abrir el panel de archivos, pero en este caso hablamos del campo del source control el cual nos permite abrir el sistema de manejo de versiones que maneja visual studio code de git, el cual abre la pestaña mostrada a continuacion: 
-<br>
-<br>
-<img src="assets/images/visual_studio_code/img_3.png" width="200" center></img>
+## 🧭 Panel de *Source Control* (Control de versiones)
+En la barra lateral izquierda, junto al icono del explorador de archivos, se encuentra el botón del **Source Control**, que abre el panel donde VS Code gestiona las funciones relacionadas con Git. Este panel permite:
 
-Una vez visualizada toda la seccion completa explicaremos parte por parte que conforma a esta, primeramente como se dijo anteriormente cuando creamos un archivo nuevo, modificamos alguno o incluso lo eliminamos se mostrtara un listado de dichos archivos en la parte inferior del boton azul, donde segun el tipo de cambio del archivo se abrira como una especie de seccion, pudiendo ser, staged changes, changes, donde staged changes son aquellos elementos que ya fueron agregados a stage mientras uqe los changes son unicamnete cambios que se realizaron pero que aun no estan en modo stage, lo cual puede implicar que son cambios de archivos diferentes o de los mismos archivos que estan en stage pero que hay cambios sin stagear. Por lo que ademas alado del nombre del archivo se podra mostrar un simbolo siendo "A" para archivos stage sin mas cambios y listo para comitear, "M" de que el archivo fue modificado, "U" para archivos que aun no estan en stage y hay otros mas, por lo que en visual studio code se visualizan de la siguiente manera: 
-<br>
-<br>
-<img src="assets/images/visual_studio_code/img_4.png" width="200" center></img>
+- Visualizar archivos modificados  
+- Identificar archivos en *stage* o fuera de él  
+- Escribir mensajes de commit  
+- Hacer *stage* o *unstage* de archivos  
+- Ver diferencias entre versiones  
 
-> 👁️ *Dato: el listado de simbolos de "A,M,U", tambien se mostraran en la seccion del explorador de archivos, donde se visualizan todos los archivos de nuestro proyecto, igualmente coloreandose de amarillo para aquellos archivos que fueron modificados y en azul los archivos que estan en stage listos para ser subidos a commit.
 <br>
-<br>
-<img src="assets/images/visual_studio_code/img_5.png" width="200" center></img>
+<p align=center>
+	<img src="assets/images/visual_studio_code/img_3.png" width="200"></img>
+</p>
 
-Ahora bien si nosotors cliqueamos un archivo con el simbolo M de modificado en el source control se nos abriran 2 pestañas en visual studio code, la primera a mano izquierda mostrando los cambios anteriores antes de ser modificado el archivo y en la parte derecha lo que contiene actualmente el archivo osea sus modificaciones.
+## 📂 Secciones: *Staged Changes* y *Changes*
+Dentro del panel de control de versiones, los archivos modificados se organizan en dos áreas:
+
+### **🔵 Staged Changes**
+Aquí aparecen los archivos que **ya fueron agregados a stage** mediante un `git add`.  
+Estos archivos están **listos para ser incluidos** en un commit.
+
+### **🟡 Changes**
+Aquí se muestran:
+- Archivos modificados **pero aún sin agregar a stage**.  
+- Archivos que *ya están en stage*, pero recibieron **modificaciones adicionales** sin stagear.
+
+A la derecha del nombre de cada archivo, VS Code muestra una **letra** indicando el tipo de cambio:
+
+- **A** → Archivo agregado al proyecto (nuevo).  
+- **M** → Archivo modificado.  
+- **U** → Archivo sin seguimiento (*untracked*).  
+
+Estos indicadores ayudan a entender qué tipo de modificación ocurrió en cada archivo.
+
 <br>
+<p align=center>
+	<img src="assets/images/visual_studio_code/img_4.png" width="200"></img>
+</p>
+
+## 👁️ Visualización dentro del explorador de archivos
+Los mismos indicadores también aparecen en el explorador de archivos general, junto a los nombres de los archivos del proyecto:
+
+- Archivos **modificados** se muestran marcados en **amarillo**.  
+- Archivos que ya están **stageados** se muestran en **azul**.  
+
+Esto permite reconocer el estado de cada archivo sin necesidad de entrar al panel del control de versiones.
+
 <br>
-<img src="assets/images/visual_studio_code/img_6.png" width="200" center></img>
+<p align=center>
+	<img src="assets/images/visual_studio_code/img_5.png" width="200"></img>
+</p>
+
+## 📝 Vista de diferencias (*Diff*)
+Si se selecciona un archivo marcado con **M** (modificado) dentro del Source Control, VS Code abrirá automáticamente una vista dividida:
+
+- **Panel izquierdo:** muestra el contenido del archivo **antes de la modificación**.  
+- **Panel derecho:** muestra **la versión actual**, es decir, los cambios realizados.  
+
+Esta herramienta es muy útil para revisar qué líneas fueron agregadas, cambiadas o eliminadas antes de confirmar un commit.
+
+<br>
+<p align=center>
+	<img src="assets/images/visual_studio_code/img_6.png" width="350"></img>
+</p>
+
