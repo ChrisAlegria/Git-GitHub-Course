@@ -895,8 +895,7 @@ En la barra lateral izquierda, junto al icono del explorador de archivos, se enc
 Dentro del panel de control de versiones, los archivos modificados se organizan en dos áreas:
 
 ### **🔵 Staged Changes**
-Aquí aparecen los archivos que **ya fueron agregados a stage** mediante un `git add`.  
-Estos archivos están **listos para ser incluidos** en un commit.
+Aquí aparecen los archivos que **ya fueron agregados a stage** mediante un `git add`. Estos archivos están **listos para ser incluidos** en un commit.
 
 ### **🟡 Changes**
 Aquí se muestran:
@@ -942,3 +941,14 @@ Esta herramienta es muy útil para revisar qué líneas fueron agregadas, cambia
 	<img src="assets/images/visual_studio_code/img_6.png" width="350"></img>
 </p>
 
+## 🔄 Restaurar cambios desde el Diff
+En la vista del *diff*, específicamente **en el panel derecho**, donde aparecen los cambios actuales, Visual Studio Code añade un pequeño botón en forma de **flecha curva** o de **tres puntos** junto a cada línea o bloque modificado. Esta opcion sirve para:
+
+- **Restaurar la línea** a su versión anterior  
+- **Revertir solo ese cambio específico**, sin afectar el resto del archivo  
+- Facilitar correcciones rápidas sin usar comandos en la terminal  
+
+En pocas palabras: si una modificación no convence, basta con **dar clic en la flecha o los tres puntos** para regresar esa línea exactamente a como estaba antes del cambio.
+
+<br>
+<img src="assets/images/visual_studio_code/img_7.png" width="200" center></img>
