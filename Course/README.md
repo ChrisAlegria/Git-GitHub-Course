@@ -1008,8 +1008,7 @@ Al confirmar el commit, la lista de cambios en el panel de Source Control **se v
 </p>
 
 ## 🌳 Crear ramas
-En Visual Studio Code, en la **esquina inferior izquierda**, aparece un **icono de ramas** acompañado del **nombre de la rama actual** en la que estamos trabajando.  
-&nbsp;<img src="assets/images/visual_studio_code/img_1.png" width="40"></img>&nbsp;. Si hacemos clic sobre este elemento, se abrirá en la parte superior una **barra de búsqueda** con varias opciones relacionadas con la gestión de ramas. Las tres primeras opciones que aparecen son:
+En Visual Studio Code, en la **esquina inferior izquierda**, aparece un **icono de ramas** acompañado del **nombre de la rama actual** en la que estamos trabajando. &nbsp;<img src="assets/images/visual_studio_code/img_1.png" width="40"></img>&nbsp;. Si hacemos clic sobre este elemento, se abrirá en la parte superior una **barra de búsqueda** con varias opciones relacionadas con la gestión de ramas. Las tres primeras opciones que aparecen son:
 
 - **(＋) Create new branch** → permite **crear una nueva rama desde la rama actual**.  
 - **Create new branch from…** → permite **crear una nueva rama a partir de otra rama diferente** (por ejemplo, crear una rama desde *main* aunque actualmente estés en *dev*).  
@@ -1017,7 +1016,7 @@ En Visual Studio Code, en la **esquina inferior izquierda**, aparece un **icono 
 
 <br>
 <p align="center">
-	  <img src="assets/images/visual_studio_code/img_13.png" width="200"></img>
+	  <img src="assets/images/visual_studio_code/img_13.png" width="250"></img>
 </p>
 
 ### Listado de ramas locales
