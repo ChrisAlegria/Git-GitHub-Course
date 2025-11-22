@@ -1100,3 +1100,53 @@ Al seleccionar “Merge”, Visual Studio Code abrirá la **barra de búsqueda s
 Además del merge, este menú permite realizar prácticamente cualquier acción común de Git: cambiar de rama, hacer un fetch, trabajar con stashes, manejar tags, revisar historial, entre muchas otras opciones esenciales del flujo de trabajo. Los **tres puntitos** funcionan como una **puerta de acceso a casi todas las herramientas avanzadas de Git** dentro de VS Code, lo que facilita administrar el proyecto sin necesidad de comandos manuales.
 
 # 📊 VSC Plugin: Git Graph
+Dentro de Visual Studio Code existen numerosas **extensiones externas** que no vienen incluidas por defecto, pero que han sido desarrolladas por terceros para mejorar el flujo de trabajo. Una de las más útiles y populares en proyectos que usan Git es **Git Graph**, una herramienta que permite visualizar de manera gráfica y clara la historia completa del repositorio: commits, ramas, merges, pushes y mucho más.
+
+<br>
+<p align="center">
+	  <img src="assets/images/git_graph/img_1.png" width="200"></img>
+</p>
+
+
+## ⭐ ¿Dónde aparece Git Graph una vez instalado?
+Después de instalar la extensión, podemos acceder a ella desde el apartado de **Source Control**.  
+En la parte superior —donde normalmente aparecen las opciones para ver más comandos de Git y refrescar el repositorio—, ahora aparecerá un nuevo botón con un ícono que parece un conjunto de **cables o conexiones**, el cual abre directamente Git Graph.
+
+<br>
+<p align="center">
+	  <img src="assets/images/git_graph/img_2.png" width="200"></img>
+</p>
+
+## 🧩 ¿Qué muestra Git Graph?
+Al abrir Git Graph, se despliega una vista completa y visual del historial del repositorio. Esta vista está dividida principalmente en dos secciones:
+
+### 🟣 **Lado izquierdo: Línea de tiempo visual**
+
+Aquí se muestra una **representación gráfica del árbol de Git**:
+
+- La **línea azul** representa la rama `main` (o `master`).  
+- Si creamos nuevas ramas, aparecerán **líneas de diferentes colores** naciendo desde el commit donde se bifurcaron.  
+- Si hiciste un merge, podrás ver claramente cómo estas ramas **se unen nuevamente** hacia la principal.
+- Cada **punto** en las líneas representa un **commit**, posicionado exactamente en la rama donde ocurrió.
+
+En conjunto, esta visualización ayuda a entender cómo ha evolucionado el proyecto con el tiempo.
+
+### 🟡 **Lado derecho: Lista de commits**
+A la derecha aparece una lista completa de todos los commits, ordenados cronológicamente.  
+Cada uno muestra:
+
+- Su **mensaje de commit**  
+- El **autor**  
+- La **fecha y hora**  
+- La **rama** en la que se realizó  
+- Y se conecta visualmente con el punto en la línea gráfica correspondiente.
+
+Además:
+- Cuando se crea una rama nueva, Git Graph coloca un **recuadro de color** junto al commit donde nació dicha rama, mostrando claramente su **nombre**.
+- Cada acción queda registrada: creación de ramas, merges, push, pull, etc.
+
+<br>
+<p align="center">
+	  <img src="assets/images/git_graph/img_3.png" width="500"></img>
+</p>
+
