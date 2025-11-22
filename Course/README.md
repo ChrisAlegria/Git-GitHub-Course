@@ -1098,3 +1098,5 @@ Al seleccionar “Merge”, Visual Studio Code abrirá la **barra de búsqueda s
 
 ### Más opciones disponibles
 Además del merge, este menú permite realizar prácticamente cualquier acción común de Git: cambiar de rama, hacer un fetch, trabajar con stashes, manejar tags, revisar historial, entre muchas otras opciones esenciales del flujo de trabajo. Los **tres puntitos** funcionan como una **puerta de acceso a casi todas las herramientas avanzadas de Git** dentro de VS Code, lo que facilita administrar el proyecto sin necesidad de comandos manuales.
+
+# 📊 VSC Plugin: Git Graph
