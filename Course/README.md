@@ -1234,3 +1234,5 @@ Estas instrucciones incluyen:
 <p align="center">
 	  <img src="assets/images/git_remote_origin/img_4.png" width="200"></img>
 </p>
+
+## 🌐 Gi Remote
